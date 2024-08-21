@@ -1,0 +1,344 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #154dc5;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a span {
+    margin-left: 8px;
+}
+
+/* Esconder o texto dos links no mobile */
+@media (max-width: 768px) {
+    nav ul li a span {
+        display: none;
+    }
+
+    nav ul li a {
+        font-size: 24px; /* Aumentar o tamanho do ícone no mobile */
+    }
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+section {
+    margin: 40px 0;
+}
+
+footer {
+    background-color: #154dc5;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #154dc5;
+    border: none;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+}
+
+.contact-icons a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.contact-icons a:hover {
+    color: #ccc;
+}
+
+/* Para garantir que o footer fique no fundo da página */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.form{
+    grid-area: form;
+    border-radius: 5px;
+}
+
+.info{
+    grid-area: info;
+}
+
+.contact{
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+}
+
+.box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas:
+    "form info"
+    "form map";
+    grid-gap: 20px;
+}
+
+.contact h3{
+    color: #000;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/*Form*/
+
+.formBox{
+    position: relative;
+    width: 100%;
+}
+
+.formBox .row50{
+    display: flex;
+    gap: 20px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.inputBox input{
+    color: #000;
+}
+
+.formBox .row100 .inputBox{
+    width: 100%;
+}
+
+.inputBox span{
+    color: #154dc5;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid rgb(66, 54, 54);
+    border-radius: 5px;
+}
+
+.inputBox textarea{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid rgb(66, 54, 54);
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.inputBox input[type="submit"]{
+    background: #154dc5;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+
+.inputBox::placeholder{
+    color: #999;
+}
+
+/* Info*/
+
+.info{
+    background: #154dc5;
+    border-radius: 5px;
+}
+
+.info h3{
+    color: #fff;
+}
+
+.info .infoBox div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info .infoBox div span{
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #154dc5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info .infoBox div p{
+    color: #fff;
+}
+
+.info .infoBox div a{
+    color: #fff;
+    text-decoration:none;
+    font-size: 1.1em;
+}
+
+.sci{
+    margin-top: 40px;
+    display: flex;
+    padding: 7px;
+    justify-content: center;
+}
+
+.sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.sci li a{
+    color: #fff;
+    font-size: 2em;
+    color: #ccc;
+}
+
+.sci li a:hover{
+    color: #fff;
+}
+
+/* Design responsive (contatos)*/
+
+@media (max-width: 991px){
+    #contact {
+        padding: 20px; /* Reduz padding do contato */
+    }
+
+    .box{
+        grid-template-columns: 1fr; /* Altera para uma coluna */
+        grid-template-rows: auto; /* Redefine para linhas automáticas */
+        grid-template-areas: 
+        "form"
+        "info"
+        "map";
+        grid-gap: 10px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .inputBox{
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .inputBox input[type="submit"]{
+        max-width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .info .infoBox div span{
+        font-size: 1.2em; /* Reduz o tamanho do ícone */
+        min-width: 30px; /* Reduz o tamanho mínimo */
+        height: 30px; /* Reduz a altura */
+    }
+
+    .sci li a{
+        font-size: 1.5em; /* Reduz o tamanho dos ícones de mídia social */
+    }
+}
+
+
+
