@@ -17,18 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updateEmployeeCount() {
-        getAllUsers().then(users => {
-            const employeeCount = users.length;
-            const funcionarioCardNumber = document.querySelector('#funcionarioCard .number');
-            
-            if (funcionarioCardNumber) {
-                funcionarioCardNumber.textContent = employeeCount;
-            } else {
-                console.error('#funcionarioCard .number não encontrado.');
-            }
-        }).catch(error => {
-            console.error('Erro ao contar os funcionários:', error);
+    function contarUsuariosLogados() {
+        return openDB().then(db => {
+            return new Promise((resolve, reject) => {
+                const transaction = db.transaction(storeName, 'readonly');
+                const store = transaction.objectStore(storeName);
+                let index;
+                
+                try {
+                    index = store.index('logado'); // Acessa o índice 'logado'
+                } catch (e) {
+                    return reject('Índice "logado" não encontrado.');
+                }
+
+                const request = index.count(IDBKeyRange.only(true)); // Contando os usuários logados
+
+                request.onsuccess = () => {
+                    resolve(request.result);
+                };
+
+                request.onerror = () => {
+                    reject('Erro ao contar os usuários logados');
+                };
+            });
         });
     }
 
@@ -79,5 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Formulário de atualização não encontrado.');
     }
 
-    updateEmployeeCount();
+    // Atualize a contagem de funcionários ao carregar a página
+    contarUsuariosLogados().then(count => {
+        const employeeCard = document.getElementById('funcionarioCard');
+        if (employeeCard) {
+            employeeCard.querySelector('.number').textContent = count;
+        }
+    }).catch(error => {
+        console.error('Erro ao atualizar a contagem de funcionários:', error);
+    });
 });

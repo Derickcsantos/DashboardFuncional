@@ -1,14 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-.topbar{
+.topbar {
     position: fixed;
     background: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     width: 100%;
     height: 60px;
     padding: 0 20px;
@@ -18,18 +18,18 @@
     z-index: 1;
 }
 
-.logo h2{
+.logo h2 {
     color: #293eb3;
 }
 
-.search{
+.search {
     position: relative;
     width: 60%;
     justify-self: center;
 }
 
-.search input{
-    width:100%;
+.search input {
+    width: 100%;
     height: 40px;
     padding: 0 40px;
     font-size: 16px;
@@ -39,20 +39,20 @@
     background: #f5f5f5;
 }
 
-.search i{
+.search i {
     position: absolute;
     right: 15px;
     top: 15px;
     cursor: pointer;
 }
 
-.user{
+.user {
     position: relative;
     width: 50px;
     height: 50px;
 }
 
-.user img{
+.user img {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,9 +61,7 @@
     object-fit: cover;
 }
 
-/*Sidbar starts here*/
-
-.sidebar{
+.sidebar {
     position: fixed;
     top: 60px;
     width: 260px;
@@ -72,24 +70,24 @@
     overflow-x: hidden;
 }
 
-.sidebar ul{
+.sidebar ul {
     margin-top: 20px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     width: 100%;
     list-style: none;
 }
 
-.sidebar ul li:hover{
+.sidebar ul li:hover {
     background: #fff;
 }
 
-.sidebar ul li:hover a{
+.sidebar ul li:hover a {
     color: #293eb3;
 }
 
-.sidebar ul li a{
+.sidebar ul li a {
     width: 100%;
     text-decoration: none;
     color: #fff;
@@ -98,14 +96,13 @@
     align-items: center;
 }
 
-.sidebar ul li a i{
+.sidebar ul li a i {
     min-width: 60px;
     font-size: 24px;
     text-align: center;
 }
 
-/*main section  starts here*/
-.main{
+.main {
     position: absolute;
     top: 60px;
     width: calc(100% - 260px);
@@ -114,7 +111,7 @@
     background: #f5f5f5;
 }
 
-.cards{
+.cards {
     width: 100%;
     padding: 35px 20px;
     display: grid;
@@ -122,102 +119,96 @@
     grid-gap: 20px;
 }
 
-.cards .card{
+.cards .card {
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 7px 25px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 
-.cards .card:hover{
+.cards .card:hover {
     background: #293eb3;
 }
 
-.cards .card:hover .number{
+.cards .card:hover .number,
+.cards .card:hover .card-name,
+.cards .card:hover .icon-box i {
     color: #fff;
 }
 
-.cards .card:hover .card-name{
-    color: #fff;
-}
-
-.cards .card:hover .icon-box i{
-    color: #fff;
-}
-
-.number{
+.number {
     font-size: 35px;
     font-weight: 500;
     color: #293eb3;
 }
 
-.card-name{
+.card-name {
     color: #888;
     font-weight: 600;
 }
 
-.icon-box i{
+.icon-box i {
     font-size: 45px;
     color: #293eb3;
 }
 
-/* Charts starts here */
-
-.charts{
+.charts {
     display: grid;
-    grid-template-columns:2fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 20px;
-    width:100%;
+    width: 100%;
     padding: 20px;
     padding-top: 0;
 }
 
-.chart{
+.chart {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     width: 100%;
 }
 
-.chart h2{
-    margin-bottom: 5px;
+.chart h2 {
+    margin-bottom: 10px;
     font-size: 20px;
     color: #666;
     text-align: center;
 }
 
-/* Responsividade starts here */
+.chart canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Responsividade */
 
 @media (max-width: 1115px) {
     .sidebar {
         width: 60px;
     }
-    .main{
+    .main {
         left: 60px;
         width: calc(100% - 60px);
     }
 }
 
-@media (max-width: 880px){
+@media (max-width: 880px) {
     .cards {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .charts {
         grid-template-columns: 1fr;
     }
-    #doughnut-chart {
-        padding: 50px;
-    }
-    #doughnut {
-        padding: 50px;
+    .chart {
+        padding: 10px;
     }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
     .topbar {
         grid-template-columns: 1fr 5fr 0.4fr 1fr;
     }
@@ -233,17 +224,17 @@
     .search input {
         padding: 0 20px;
     }
-    .fa-bell{
-        margin-right: 5px; 
+    .fa-bell {
+        margin-right: 5px;
     }
-    .user{
+    .user {
         width: 40px;
         height: 40px;
     }
-    #doughnut-chart{
-        padding: 2px;
+    .chart {
+        padding: 10px;
     }
-    #doughnut{
-        padding: 0;
+    .chart h2 {
+        font-size: 16px;
     }
 }

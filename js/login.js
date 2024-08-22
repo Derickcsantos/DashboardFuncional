@@ -7,8 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
         getUserByEmail(email).then(user => {
             if (user && user.password === password) {
                 
-                localStorage.setItem('userId', user.id);
-                window.location.href = 'logado.html'; 
+                user.logado = true; // Define o usuário como logado
+                updateUser(user).then(() => {
+                    localStorage.setItem('userId', user.id);
+                    window.location.href = 'logado.html'; 
+                }).catch(error => {
+                    console.error('Erro ao atualizar o status de login:', error);
+                });
             } else {
                 alert('Credenciais inválidas');
             }
@@ -24,36 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('register-email').value;
         const password = document.getElementById('register-password').value;
 
-        getUserByEmail(email).then(existingUser => {
-            if (existingUser) {
-                alert('Usuário já registrado');
-            } else {
-                const newUser = { name, telefone, email, password };
-                addUser(newUser).then(() => {
-                    alert('Usuário registrado com sucesso');
-                    document.getElementById('register-form').reset();
-                }).catch(error => {
-                    console.error('Erro ao registrar usuário:', error);
-                });
-            }
+        addUser({ name, telefone, email, password, logado: true }).then((userId) => {
+            localStorage.setItem('userId', userId);
+            window.location.href = 'logado.html'; 
         }).catch(error => {
-            console.error('Erro ao verificar usuário:', error);
+            console.error('Erro ao registrar usuário:', error);
         });
     });
+
+    // Alternar entre login e registro
     const showRegisterButton = document.getElementById('show-register');
     const showLoginButton = document.getElementById('show-login');
     const registerSection = document.getElementById('register-section');
     const loginSection = document.getElementById('login-section');
-
-    showRegisterButton.addEventListener('click', () => {
-        registerSection.style.display = 'block';
-        loginSection.style.display = 'none';
-    });
-
-    showLoginButton.addEventListener('click', () => {
-        registerSection.style.display = 'none';
-        loginSection.style.display = 'block';
-    });
 
     function showRegister(){
         registerSection.style.display = 'block';
@@ -68,10 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         showRegisterButton.style.display = 'block'; 
         showLoginButton.style.display = 'none';     
     }
-    
-    
+
     showRegister(); 
-    
     showRegisterButton.addEventListener('click', showRegister);
     showLoginButton.addEventListener('click', showLogin);
 });

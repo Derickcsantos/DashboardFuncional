@@ -11,6 +11,12 @@ function openDB() {
             if (!db.objectStoreNames.contains(storeName)) {
                 const store = db.createObjectStore(storeName, { keyPath: 'id', autoIncrement: true });
                 store.createIndex('email', 'email', { unique: true });
+                store.createIndex('logado', 'logado', { unique: false }); // Criação do índice 'logado'
+            } else {
+                const store = event.target.transaction.objectStore(storeName);
+                if (!store.indexNames.contains('logado')) {
+                    store.createIndex('logado', 'logado', { unique: false }); // Adiciona o índice 'logado'
+                }
             }
         };
 

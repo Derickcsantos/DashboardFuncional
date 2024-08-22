@@ -67,7 +67,7 @@ body {
     display: block; /* Mostrar o formulário de registro inicialmente */
 }
 
-form {
+.login {
     margin-bottom: 20px;
     background-color: #fff;
     width: 300px;
