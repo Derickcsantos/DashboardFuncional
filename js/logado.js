@@ -2,17 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderUser(user) {
         const userIdField = document.getElementById('user-id');
         const userNameField = document.getElementById('user-name');
+        const userPhoneField = document.getElementById('user-phone');
         const userEmailField = document.getElementById('user-email');
         const userPasswordField = document.getElementById('user-password');
         const userSection = document.getElementById('user-section');
 
-        if (userIdField && userNameField && userEmailField && userPasswordField && userSection) {
+        if (userIdField && userNameField && userPhoneField && userEmailField && userPasswordField && userSection) {
             userIdField.value = user.id;
             userNameField.value = user.name;
+            userPhoneField.value = user.phone;
             userEmailField.value = user.email;
             userPasswordField.value = user.password;
             userSection.style.display = 'block';
-        } else {
+        } 
+        else {
             console.error('Um ou mais campos de usuário não foram encontrados.');
         }
     }

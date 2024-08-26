@@ -2,7 +2,6 @@ document.getElementById('setor').addEventListener('change', function() {
     const setor = this.value;
     const formularioContainer = document.getElementById('formulario-container');
     
-    // Limpa o conteúdo anterior
     formularioContainer.innerHTML = '';
 
     if (setor) {
@@ -22,7 +21,7 @@ document.getElementById('setor').addEventListener('change', function() {
                         <label for="mensagem">Mensagem:</label>
                         <textarea id="mensagem" name="mensagem" required></textarea>
                         
-                        <button class="enviar" type="submit">Enviar para Financeiro</button>
+                        <button class="enviar" type="submit">Enviar</button>
                     </form>
                 `;
                 break;
@@ -39,7 +38,7 @@ document.getElementById('setor').addEventListener('change', function() {
                         <label for="mensagem">Mensagem:</label>
                         <textarea id="mensagem" name="mensagem" required></textarea>
                         
-                        <button class="enviar" type="submit">Enviar para Jurídico</button>
+                        <button class="enviar" type="submit">Enviar</button>
                     </form>
                 `;
                 break;
@@ -56,7 +55,7 @@ document.getElementById('setor').addEventListener('change', function() {
                         <label for="mensagem">Mensagem:</label>
                         <textarea id="mensagem" name="mensagem" required></textarea>
                         
-                        <button class="enviar" type="submit">Enviar para Administração</button>
+                        <button class="enviar" type="submit">Enviar</button>
                     </form>
                 `;
                 break;
@@ -73,13 +72,12 @@ document.getElementById('setor').addEventListener('change', function() {
                         <label for="mensagem">Mensagem:</label>
                         <textarea id="mensagem" name="mensagem" required></textarea>
                         
-                        <button class="enviar" type="submit">Enviar para Resenha</button>
+                        <button class="enviar" type="submit">Enviar</button>
                     </form>
                 `;
                 break;
         }
         
-        // Insere o formulário específico no container
         formularioContainer.innerHTML = formulario;
     }
 });
