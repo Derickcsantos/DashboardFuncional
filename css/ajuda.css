@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #fff;
 }
 
 header {
@@ -59,71 +60,106 @@ section {
     margin: 40px 0;
 }
 
-footer {
-    background-color: #154dc5;
+.footer-bottom {
+    background: #154dc5;
     color: #fff;
-    padding: 20px 0;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
 }
 
-.footer-content {
+.row-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: left;
-    padding: 20px;
+    justify-content: center;
+    gap: 20px;
 }
 
-.footer-section {
-    flex: 1;
-    padding: 10px;
-    min-width: 200px;
+.footer-col {
+    width: 100%;
+    max-width: 300px;
+    padding: 0 10px;
+    margin-bottom: 20px;
 }
 
-.footer-section h2 {
-    margin-bottom: 10px;
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-weight: 500;
+    position: relative;
 }
 
-.footer-section ul {
-    list-style-type: none;
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 40%;
+    bottom: -5px;
+    background-color: #fff;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.footer-section ul li {
+.footer-col ul li {
     margin-bottom: 10px;
 }
 
-.footer-section ul li a {
-    color: #fff;
+.footer-col ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #bbbbbb;
     text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: color 0.3s ease, padding 0.3s ease;
 }
 
-.footer-section ul li a:hover {
-    text-decoration: underline;
+.footer-col ul li a:hover {
+    color: #fff;
+    padding: 8px;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #154dc5;
-    border: none;
-}
-
-.contact-icons {
+.footer-col .social-links {
     display: flex;
-    justify-content: space-between;
-    max-width: 200px;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.contact-icons a {
+.footer-col .social-links a {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
     color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-    padding: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.contact-icons a:hover {
-    color: #ccc;
+.footer-col .social-links a:hover {
+    background-color: #fff;
+    color: #154dc5;
 }
+
+.map {
+    grid-area: map;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
 
 /* Para garantir que o footer fique no fundo da página */
 html, body {
@@ -156,7 +192,7 @@ main {
     box-shadow: 0 5px 35px rgba(0,0,0,0.15);
 }
 
-.box{
+.box {
     position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -165,6 +201,9 @@ main {
     "form info"
     "form map";
     grid-gap: 20px;
+    max-width: 800px; /* Define uma largura máxima para o box */
+    margin: 0 auto; /* Centraliza o box */
+    width: 100%; /* Garante que o box ocupe 100% da largura até o max-width */
 }
 
 .contact h3{
@@ -174,7 +213,6 @@ main {
     margin-bottom: 10px;
 }
 
-/*Form*/
 
 .formBox{
     position: relative;
@@ -304,41 +342,121 @@ main {
     color: #fff;
 }
 
+.center{
+    text-align: center;
+    justify-content: justify;
+    width: 100%;
+    padding: 3% 20% 5% 20%; 
+}
+
 /* Design responsive (contatos)*/
 
-@media (max-width: 991px){
-    #contact {
-        padding: 20px; /* Reduz padding do contato */
+@media (max-width: 991px) {
+    .box {
+        grid-template-columns: 1fr; /* Alterar para uma coluna */
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "form"
+            "info"
+            "map";
+        gap: 15px; /* Ajusta o espaçamento entre os itens */
+        max-width: 90%; /* Reduz a largura máxima em dispositivos menores */
+        margin: 0 auto; /* Centraliza a caixa horizontalmente */
     }
 
-    .box{
-        grid-template-columns: 1fr; /* Altera para uma coluna */
-        grid-template-rows: auto; /* Redefine para linhas automáticas */
-        grid-template-areas: 
-        "form"
-        "info"
-        "map";
-        grid-gap: 10px; /* Reduz o espaçamento entre os itens */
+    .contact {
+        padding: 20px; /* Ajusta o padding para dispositivos menores */
     }
 
-    .inputBox{
-        width: 100%; /* Ocupa toda a largura disponível */
+    .inputBox {
+        margin-bottom: 15px; /* Ajusta o espaçamento inferior para input boxes */
     }
 
-    .inputBox input[type="submit"]{
-        max-width: 100%; /* Ocupa toda a largura disponível */
+    .inputBox input,
+    .inputBox textarea {
+        font-size: 0.9em; /* Reduz o tamanho da fonte */
+        padding: 8px; /* Ajusta o padding */
     }
 
-    .info .infoBox div span{
-        font-size: 1.2em; /* Reduz o tamanho do ícone */
-        min-width: 30px; /* Reduz o tamanho mínimo */
-        height: 30px; /* Reduz a altura */
+    .inputBox input[type="submit"] {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do botão de envio */
+        max-width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+        padding: 10px; /* Ajusta o padding do botão de envio */
     }
 
-    .sci li a{
-        font-size: 1.5em; /* Reduz o tamanho dos ícones de mídia social */
+    .info {
+        padding: 15px; /* Reduz o padding da seção de informações */
+    }
+
+    .info .infoBox div span {
+        font-size: 1.2em; /* Reduz o tamanho dos ícones de informações */
+        min-width: 30px; /* Ajusta o tamanho mínimo dos ícones */
+        height: 30px; /* Ajusta a altura dos ícones */
+    }
+
+    .sci li a {
+        font-size: 1.5em; /* Reduz o tamanho dos ícones de redes sociais */
     }
 }
 
+@media (max-width: 576px) {
+    .inputBox {
+        width: 100%; /* Garante que os inputs ocupem toda a largura disponível em dispositivos muito pequenos */
+    }
 
+    .inputBox input,
+    .inputBox textarea {
+        font-size: 0.8em; /* Ajuste adicional no tamanho da fonte */
+        padding: 6px; /* Ajuste adicional no padding */
+    }
 
+    .inputBox input[type="submit"] {
+        font-size: 0.8em; /* Reduz o tamanho da fonte do botão de envio para dispositivos muito pequenos */
+        padding: 8px; /* Ajuste adicional no padding do botão de envio */
+    }
+
+    .info .infoBox div span {
+        font-size: 1em; /* Reduz o tamanho dos ícones de informações para dispositivos muito pequenos */
+        min-width: 25px; /* Ajuste adicional no tamanho mínimo dos ícones */
+        height: 25px; /* Ajuste adicional na altura dos ícones */
+    }
+
+    .sci li a {
+        font-size: 1.3em; /* Ajuste adicional no tamanho dos ícones de redes sociais */
+    }
+    .box {
+        max-width: 95%; /* Ajuste adicional para dispositivos muito pequenos */
+    }
+}
+
+/*footer responsividade*/
+
+@media (max-width: 767px) {
+    .footer-col {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .row-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 15px;
+    }
+
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+
+    .footer-col .social-links {
+        gap: 8px;
+    }
+
+    .footer-col .social-links a {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+}

@@ -14,33 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
             userEmailField.value = user.email;
             userPasswordField.value = user.password;
             userSection.style.display = 'block';
-        } 
-        else {
+        } else {
             console.error('Um ou mais campos de usuário não foram encontrados.');
         }
     }
 
-    function contarUsuariosLogados() {
+    // Função para contar o número total de IDs no banco de dados
+    function contarTotalDeIds() {
         return openDB().then(db => {
             return new Promise((resolve, reject) => {
-                const transaction = db.transaction(storeName, 'readonly');
-                const store = transaction.objectStore(storeName);
-                let index;
-                
-                try {
-                    index = store.index('logado'); // Acessa o índice 'logado'
-                } catch (e) {
-                    return reject('Índice "logado" não encontrado.');
-                }
-
-                const request = index.count(IDBKeyRange.only(true)); // Contando os usuários logados
+                const transaction = db.transaction('usuarios', 'readonly');
+                const store = transaction.objectStore('usuarios');
+                const request = store.count(); // Contando o número total de IDs
 
                 request.onsuccess = () => {
-                    resolve(request.result);
+                    resolve(request.result); // Resolve com o número total de IDs
                 };
 
                 request.onerror = () => {
-                    reject('Erro ao contar os usuários logados');
+                    reject('Erro ao contar os IDs');
                 };
             });
         });
@@ -79,10 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             const id = document.getElementById('user-id').value;
             const name = document.getElementById('user-name').value;
+            const phone = document.getElementById('user-phone').value
             const email = document.getElementById('user-email').value;
             const password = document.getElementById('user-password').value;
 
-            const updatedUser = { id: parseInt(id), name, email, password };
+            const updatedUser = { id: parseInt(id), name, phone, email, password };
             updateUser(updatedUser).then(() => {
                 alert('Dados atualizados com sucesso');
             }).catch(error => {
@@ -93,13 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Formulário de atualização não encontrado.');
     }
 
-    // Atualize a contagem de funcionários ao carregar a página
-    contarUsuariosLogados().then(count => {
+    // Atualize o card de funcionários com o número total de IDs ao carregar a página
+    contarTotalDeIds().then(count => {
         const employeeCard = document.getElementById('funcionarioCard');
         if (employeeCard) {
             employeeCard.querySelector('.number').textContent = count;
         }
     }).catch(error => {
-        console.error('Erro ao atualizar a contagem de funcionários:', error);
+        console.error('Erro ao atualizar a contagem de IDs:', error);
     });
 });

@@ -106,10 +106,11 @@ button.enviar:hover {
 }
 
 .table-container{
-    display: flex;
-    justify-content: center;
+    display: block;
     width: 100%;
     overflow-x: auto;
+    width: calc(100% - 40px);
+    margin: 0 auto;
 }
 
 .table-container::-webkit-scrollbar { /* estilização do scroll*/
@@ -138,7 +139,8 @@ button.enviar:hover {
 }
 
 .users-table {
-    width: 80%;               
+    width: 100%; 
+    min-width: 600px;  
     border-collapse: collapse;    
     margin: 0 auto;   
 }
@@ -147,7 +149,8 @@ button.enviar:hover {
 table {
     margin-top: 20px;
     border-collapse: collapse;
-    width: 80%; 
+    min-width: 600px;
+    width: 100%; 
 }
 
 
