@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/configuracoes.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Configurações</h2>
+            <ul>
+                <li><a href="#" class="active" onclick="showContent('geral')"><i class="fa-solid fa-bars"></i>Geral</a></li>
+                <li><a href="#" onclick="showContent('privacidade')"><i class="fa-solid fa-user-lock"></i>Privacidade</a></li>
+                <li><a href="#" onclick="showContent('personalizacao')"><i class="fa-solid fa-palette"></i>Personalização</a></li>
+                <li><a href="logado.html" ><i class="fa-solid fa-right-from-bracket"></i>Sair</a></li>
+                <!-- Para criar novas categorias basta realizar o mesmo procedimento a cima-->
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div id="geral" class="content-section">
+                <h3></i>Geral</h3>
+                <p>Conteúdo das configurações gerais.</p>
+            </div>
+            <div id="privacidade" class="content-section" style="display: none;">
+                <h3>Privacidade</h3>
+                <p>Conteúdo das configurações de privacidade.</p>
+            </div>
+            <div id="personalizacao" class="content-section" style="display: none;">
+                <h3></i>Personalização</h3>
+                <p>Conteúdo das configurações de Personalização.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/configuracoes.js"></script>
+</body>
+</html>

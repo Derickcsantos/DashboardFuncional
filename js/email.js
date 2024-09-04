@@ -8,9 +8,9 @@ document.getElementById('setor').addEventListener('change', function() {
         let formulario = '';
         
         switch (setor) {
-            case 'financeiro':
+            case 'feedback':
                 formulario = `
-                    <form id="financeiro-form">
+                    <form id="feedback-form">
                         <input type="hidden" name="apiKey" value="SUA_API_KEY_FINANCEIRO">
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required>
@@ -25,9 +25,9 @@ document.getElementById('setor').addEventListener('change', function() {
                     </form>
                 `;
                 break;
-            case 'juridico':
+            case 'financeiro':
                 formulario = `
-                    <form id="juridico-form">
+                    <form id="financeiro-form">
                         <input type="hidden" name="apiKey" value="SUA_API_KEY_JURIDICO">
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required>
@@ -42,9 +42,9 @@ document.getElementById('setor').addEventListener('change', function() {
                     </form>
                 `;
                 break;
-            case 'administracao':
+            case 'proposta':
                 formulario = `
-                    <form id="administracao-form">
+                    <form id="proposta-form">
                         <input type="hidden" name="apiKey" value="SUA_API_KEY_ADMINISTRACAO">
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required>
