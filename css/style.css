@@ -230,6 +230,27 @@ label {
     font-weight: bold;
 }
 
+.theme{
+    text-align: center;
+    
+}
+
+.tema{
+    border: none;
+    background-color: #fff;
+    margin: 0 0 10px 0 ;
+    background-color: #7ba3ce;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+}
+
+#fixar{
+    font-size: 24px;
+    margin: 0 0 0 10px;
+}
+
 input, textarea, select {
     width: 100%;
     padding: 10px;
