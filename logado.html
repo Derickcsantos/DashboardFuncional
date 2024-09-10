@@ -9,13 +9,13 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="topbar">
+    <div id="containerLogado" class="container">
+        <div id="topbar" class="topbar">
             <div class="logo">
                 <h2>Logado</h2>
             </div>
             <div class="search">
-                <input type="text" id="search" placeholder="search here">
+                <input type="text" id="search" placeholder="Pesquise aqui">
                 <label for="search"> <i class="fas fa-search"></i></i></label>
             </div>
             <a href="email.html"><i class="fas fa-bell"></i></a>
@@ -23,7 +23,7 @@
                 <a href="usuario.html"><img src="imagem/user.png" alt=""></a>
             </div>
         </div>
-        <div class="sidebar">
+        <div id="side" class="sidebar">
             <ul>
                 <li>
                     <a href="logado.html">
@@ -81,9 +81,9 @@
                 </li>
             </ul>
         </div>
-        <div class="main">
+        <div id="centro" class="main">
             <div class="cards">
-                <div class="card">
+                <div id="boxCliente" class="card">
                     <div class="card-content" id="clienteCard">
                         <div class="number">1217</div>
                         <div class="card-name">Clientes</div>
@@ -92,7 +92,7 @@
                         <i class="fas fa-user-graduate"></i>
                     </div>
                 </div>
-                <div class="card">
+                <div id="boxProfessor" class="card">
                     <div class="card-content" id="professorCard">
                         <div class="number">42</div>
                         <div class="card-name">Funcionarios</div>
@@ -101,7 +101,7 @@
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
                 </div>
-                <div class="card">
+                <div id="boxFuncionario" class="card">
                     <div class="card-content" id="funcionarioCard">
                         <div class="number">0</div>
                         <div class="card-name">Usuarios</div>
@@ -121,11 +121,11 @@
                 </div>
             </div>
             <div class="charts">
-                <div class="chart">
+                <div id="boxChartUm" class="chart">
                     <h2>Ganhos (Ultimos 12 meses)</h2>
                     <canvas id="lineChart"></canvas>
                 </div>
-                <div class="chart" id="doughnut-chart">
+                <div class="chart" id="boxChartDois">
                     <h2>Funcionarios</h2>
                     <canvas id="doughnut"></canvas>
                 </div>
@@ -139,5 +139,6 @@
     <script src="js/chart2.js"></script>
     <script src="js/db.js"></script>
     <script src="js/logado.js"></script>
+    <script src="js/tema.js"></script>
 </body>
 </html>

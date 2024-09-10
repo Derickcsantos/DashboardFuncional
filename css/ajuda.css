@@ -39,6 +39,10 @@ nav ul li a span {
     margin-left: 8px;
 }
 
+#tituloAjuda{
+    margin: 0 0 50px 0;
+}
+
 #faq{
     background-color: #154dc5;
     color: #fff;

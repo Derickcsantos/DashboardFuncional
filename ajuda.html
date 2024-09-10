@@ -21,8 +21,8 @@
 
     <main>
         <section id="sobre">
-            <h1>Bem-vindo! Estamos aqui para ajudar</h1>
-            <p class="center">Nosso Dashboard vai além de uma simples cópia. 
+            <h1 id="tituloAjuda">Bem-vindo! Estamos aqui para ajudar</h1>
+            <p id="introducao" class="center">Nosso Dashboard vai além de uma simples cópia. 
                 Este projeto é uma imersão em tecnologias essenciais, integrando banco de dados local, 
                 JavaScript avançado, Css dinamico e responsivo, técnicas de debugging, manipulação e experiencia com C.R.U.D e interação com diversas APIs.
                  Ele foi projetado para não só exibir dados,
@@ -52,9 +52,9 @@
         </section>
 
         <section id="contato">
-            <div class="box">
-                <div class="contact form">
-                    <h3>Envie uma mensagem</h3>
+            <div  class="box">
+                <div id="boxContato" class="contact form">
+                    <h3 id="subtitulo">Envie uma mensagem</h3>
                     <form  action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="fa223676-329c-472c-ad04-2313bcb6ffb9">
     
@@ -166,6 +166,7 @@
         </div>
     </footer>
 
+    <script src="js/tema.js"></script>
     <script src="js/ajuda.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

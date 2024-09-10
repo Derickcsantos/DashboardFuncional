@@ -19,6 +19,7 @@ body {
     color: white;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
 }
 
 .sidebar h2 {
@@ -29,16 +30,22 @@ body {
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 20px 0 0 0;
 }
 
 .sidebar ul li {
     margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar a {
     color: white;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
+    width: 100%;
     padding: 10px;
     border-radius: 4px;
 }
@@ -53,6 +60,29 @@ body {
     text-align: center;
 }
 
+/* Ocultar texto e mostrar apenas ícones em telas pequenas */
+@media (max-width: 768px) {
+    .sidebar ul li a span {
+        display: none; /* Oculta o texto ao lado dos ícones */
+    }
+    
+    .sidebar ul li a i {
+        min-width: auto; /* Remove o min-width para ícones se ajustarem */
+        font-size: 30px; /* Ajuste o tamanho dos ícones conforme necessário */
+    }
+}
+
+/* Mostrar o texto e esconder ícones em telas grandes */
+@media (min-width: 769px) {
+    .sidebar ul li a span {
+        display: inline; /* Garante que o texto seja exibido em telas grandes */
+    }
+    
+    .sidebar ul li a i {
+        min-width: 60px; /* Garante que os ícones tenham o min-width adequado */
+        font-size: 24px; /* Ajuste o tamanho dos ícones conforme necessário */
+    }
+}
 
 .main-content {
     flex: 1;
