@@ -1,6 +1,7 @@
 let escuro = false;
 
 function alterar() {
+    let logado = document.getElementById('logado');
     let formularioRegistro = document.getElementById('register-form');
     let formularioLogin = document.getElementById('login-form');
     let containerLogin = document.getElementById('containerLogin');
@@ -39,6 +40,26 @@ function alterar() {
     let cor4 = document.getElementById('cardCor4');
     let dado4 = document.getElementById('dadoCor4');
     let icon4 = document.getElementById('iconGanhos');
+    let tituloChart1 = document.getElementById('destaque1');
+    let tituloChart2 = document.getElementById('destaque2');
+    let iconSide1 = document.getElementById('iconSide1');
+    let textoSide1 = document.getElementById('textoSide1');
+    let iconSide2 = document.getElementById('iconSide2');
+    let textoSide2 = document.getElementById('textoSide2');
+    let iconSide3 = document.getElementById('iconSide3');
+    let textoSide3 = document.getElementById('textoSide3');
+    let iconSide4 = document.getElementById('iconSide4');
+    let textoSide4 = document.getElementById('textoSide4');
+    let iconSide5 = document.getElementById('iconSide5');
+    let textoSide5 = document.getElementById('textoSide5');
+    let iconSide6 = document.getElementById('iconSide6');
+    let textoSide6 = document.getElementById('textoSide6');
+    let iconSide7 = document.getElementById('iconSide7');
+    let textoSide7 = document.getElementById('textoSide7');
+    let iconSide8 = document.getElementById('iconSide8');
+    let textoSide8 = document.getElementById('textoSide8');
+    let iconSide9 = document.getElementById('iconSide9');
+    let textoSide9 = document.getElementById('textoSide9');
 
     if (!escuro) {
         document.body.style.backgroundColor = "#404040";
@@ -50,7 +71,7 @@ function alterar() {
         if (tituloUsuario) tituloUsuario.style.color = "white";
         if (containerLogado) containerLogado.style.backgroundColor = "#404040"; // Ajustado para escuro
         if (topbar) topbar.style.backgroundColor = "#202020";
-        if (sidebar) sidebar.style.backgroundColor = "#293eb3";
+        if (sidebar) sidebar.style.backgroundColor = "#404040";
         if (centro) centro.style.backgroundColor = "#202020";
         if (formUsuario) formUsuario.style.backgroundColor = "#202020";
         if (boxContato) boxContato.style.backgroundColor = "#202020";
@@ -77,7 +98,27 @@ function alterar() {
         if (cor4) cor4.style.color = "#fff";
         if (dado4) dado4.style.color = "#fff";
         if (icon4) icon4.style.color = "#fff";
-        
+        if (tituloChart1) tituloChart1.style.color = "#fff";
+        if (tituloChart2) tituloChart2.style.color = "#fff";
+        if (logado) logado.style.color = "#fff";
+        // if (iconSide1) iconSide1.style.color = "#000";
+        // if (textoSide1) textoSide1.style.color = "#000";
+        // if (iconSide2) iconSide2.style.color = "#000";
+        // if (textoSide2) textoSide2.style.color = "#000";
+        // if (iconSide3) iconSide3.style.color = "#000";
+        // if (textoSide3) textoSide3.style.color = "#000";
+        // if (iconSide4) iconSide4.style.color = "#000";
+        // if (textoSide4) textoSide4.style.color = "#000";
+        // if (iconSide5) iconSide5.style.color = "#000";
+        // if (textoSide5) textoSide5.style.color = "#000";
+        // if (iconSide6) iconSide6.style.color = "#000";
+        // if (textoSide6) textoSide6.style.color = "#000";
+        // if (iconSide7) iconSide7.style.color = "#000";
+        // if (textoSide7) textoSide7.style.color = "#000";
+        // if (iconSide8) iconSide8.style.color = "#000";
+        // if (textoSide8) textoSide8.style.color = "#000";
+        // if (iconSide9) iconSide9.style.color = "#000";
+        // if (textoSide9) textoSide9.style.color = "#000";
 
 
 
@@ -113,18 +154,40 @@ function alterar() {
         if (boxProfessor) boxProfessor.style.backgroundColor = "#fff";
         if (boxFuncionario) boxFuncionario.style.backgroundColor = "#fff";
         if (boxGanhos) boxGanhos.style.backgroundColor = "#fff";
-        if (cor1) cor1.style.color = "#888";
-        if (dado1) dado1.style.color = "#888";
-        if (icon1) icon1.style.color = "#888";
-        if (cor2) cor2.style.color = "#888";
-        if (dado2) dado2.style.color = "#888";
-        if (icon2) icon2.style.color = "#888";
-        if (cor3) cor3.style.color = "#888";
-        if (dado3) dado3.style.color = "#888";
-        if (icon3) icon3.style.color = "#888";
-        if (cor4) cor4.style.color = "#888";
-        if (dado4) dado4.style.color = "#888";
-        if (icon4) icon4.style.color = "#888";
+        if (cor1) cor1.style.color = "#154dc5";
+        if (dado1) dado1.style.color = "#154dc5";
+        if (icon1) icon1.style.color = "#154dc5";
+        if (cor2) cor2.style.color = "#154dc5";
+        if (dado2) dado2.style.color = "#154dc5";
+        if (icon2) icon2.style.color = "#154dc5";
+        if (cor3) cor3.style.color = "#154dc5";
+        if (dado3) dado3.style.color = "#154dc5";
+        if (icon3) icon3.style.color = "#154dc5";
+        if (cor4) cor4.style.color = "#154dc5";
+        if (dado4) dado4.style.color = "#154dc5";
+        if (icon4) icon4.style.color = "#154dc5";
+        if (tituloChart1) tituloChart1.style.color = "#888";
+        if (tituloChart2) tituloChart2.style.color = "#888";
+        if (logado) logado.style.color = "#293eb3";
+        // if (iconSide1) iconSide1.style.color = "#fff";
+        // if (textoSide1) textoSide1.style.color = "#fff";
+        // if (iconSide2) iconSide2.style.color = "#fff";
+        // if (textoSide2) textoSide2.style.color = "#fff";
+        // if (iconSide3) iconSide3.style.color = "#fff";
+        // if (textoSide3) textoSide3.style.color = "#fff";
+        // if (iconSide4) iconSide4.style.color = "#fff";
+        // if (textoSide4) textoSide4.style.color = "#fff";
+        // if (iconSide5) iconSide5.style.color = "#fff";
+        // if (textoSide5) textoSide5.style.color = "#fff";
+        // if (iconSide6) iconSide6.style.color = "#fff";
+        // if (textoSide6) textoSide6.style.color = "#fff";
+        // if (iconSide7) iconSide7.style.color = "#fff";
+        // if (textoSide7) textoSide7.style.color = "#fff";
+        // if (iconSide8) iconSide8.style.color = "#fff";
+        // if (textoSide8) textoSide8.style.color = "#fff";
+        // if (iconSide9) iconSide9.style.color = "#fff";
+        // if (textoSide9) textoSide9.style.color = "#fff";
+
 
         for (let i = 0; i < campo.length; i++) {
             campo[i].style.backgroundColor = "white";

@@ -12,7 +12,7 @@
     <div id="containerLogado" class="container">
         <div id="topbar" class="topbar">
             <div class="logo">
-                <h2>Logado</h2>
+                <h2 id="logado">Logado</h2>
             </div>
             <div class="search">
                 <input type="text" id="search" placeholder="Pesquise aqui">
@@ -27,56 +27,56 @@
             <ul>
                 <li>
                     <a href="logado.html">
-                        <i class="fas fa-th-large"></i>
-                        <div> Dashboard</div>
+                        <i id="iconSide1" class="fas fa-th-large"></i>
+                        <div id="textoSide1"> Dashboard</div>
                     </a>
                 </li>
                 <li>
                     <a href="areaAdmin.html">
-                        <i class="fas fa-user-graduate"></i>
-                        <div> Clientes</div>
+                        <i id="iconSide2" class="fas fa-user-graduate"></i>
+                        <div id="textoSide2"> Clientes</div>
                     </a>
                 </li>
                 <li>
                     <a href="areaAdmin.html">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <div> Teachers</div>
+                        <i id="iconSide3" class="fas fa-chalkboard-teacher"></i>
+                        <div id="textoSide3"> Teachers</div>
                     </a>
                 </li>
                 <li>
                     <a href="areaAdmin.html">
-                        <i class="fas fa-users"></i>
-                        <div> Funcionarios</div>
+                        <i id="iconSide4" class="fas fa-users"></i>
+                        <div id="textoSide4"> Funcionarios</div>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-chart-bar"></i>
-                        <div> Analyctics</div>
+                        <i id="iconSide5" class="fas fa-chart-bar"></i>
+                        <div id="textoSide5"> Analise</div>
                     </a>
                 </li>
                 <li>
                     <a href="ganhos.html">
-                        <i class="fas fa-hand-holding-usd"></i>
-                        <div> Ganhos</div>
+                        <i id="iconSide6" class="fas fa-hand-holding-usd"></i>
+                        <div id="textoSide6"> Ganhos</div>
                     </a>
                 </li>
                 <li>
                     <a href="Configuracoes.html">
-                        <i class="fas fa-cog"></i>
-                        <div> Configurações</div>
+                        <i id="iconSide7" class="fas fa-cog"></i>
+                        <div id="textoSide7"> Configurações</div>
                     </a>
                 </li>
                 <li>
                     <a href="ajuda.html">
-                        <i class="fas fa-question"></i>
-                        <div> Ajuda</div>
+                        <i id="iconSide8" class="fas fa-question"></i>
+                        <div  id="textoSide8"> Ajuda</div>
                     </a>
                 </li>
                 <li>
                     <a href="index.html">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <div> Sair</div>
+                        <i id="iconSide8" class="fa-solid fa-right-from-bracket"></i>
+                        <div  id="textoSide9"> Sair</div>
                     </a>
                 </li>
             </ul>
@@ -122,11 +122,11 @@
             </div>
             <div class="charts">
                 <div id="boxChartUm" class="chart">
-                    <h2>Ganhos (Ultimos 12 meses)</h2>
+                    <h2 id="destaque1">Ganhos (Ultimos 12 meses)</h2>
                     <canvas id="lineChart"></canvas>
                 </div>
                 <div class="chart" id="boxChartDois">
-                    <h2>Funcionarios</h2>
+                    <h2 id="destaque2">Funcionarios</h2>
                     <canvas id="doughnut"></canvas>
                 </div>
             </div>
