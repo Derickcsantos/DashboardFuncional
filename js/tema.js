@@ -23,6 +23,22 @@ function alterar() {
     let chartDois = document.getElementById('doughnut');
     let boxChartUm = document.getElementById('boxChartUm');
     let boxChartDois = document.getElementById('boxChartDois');
+    let boxCliente = document.getElementById('boxCliente');
+    let boxProfessor = document.getElementById('boxProfessor');
+    let boxFuncionario = document.getElementById('boxFuncionario');
+    let boxGanhos = document.getElementById('boxGanhos');
+    let cor1 = document.getElementById('cardCor1');
+    let dado1 = document.getElementById('dadoCor1');
+    let icon1 = document.getElementById('iconCliente');
+    let cor2 = document.getElementById('cardCor2');
+    let dado2 = document.getElementById('dadoCor2');
+    let icon2 = document.getElementById('iconProfessor');
+    let cor3 = document.getElementById('cardCor3');
+    let dado3 = document.getElementById('dadoCor3');
+    let icon3 = document.getElementById('iconFuncionario');
+    let cor4 = document.getElementById('cardCor4');
+    let dado4 = document.getElementById('dadoCor4');
+    let icon4 = document.getElementById('iconGanhos');
 
     if (!escuro) {
         document.body.style.backgroundColor = "#404040";
@@ -46,6 +62,24 @@ function alterar() {
         if (boxChartUm) boxChartUm.style.backgroundColor = "#404040";
         if (boxChartDois) boxChartDois.style.backgroundColor = "#404040";
         if (boxCliente) boxCliente.style.backgroundColor = "#404040";
+        if (boxProfessor) boxProfessor.style.backgroundColor = "#404040";
+        if (boxFuncionario) boxFuncionario.style.backgroundColor = "#404040";
+        if (boxGanhos) boxGanhos.style.backgroundColor = "#404040";
+        if (cor1) cor1.style.color = "#fff";
+        if (dado1) dado1.style.color = "#fff";
+        if (icon1) icon1.style.color = "#fff";
+        if (cor2) cor2.style.color = "#fff";
+        if (dado2) dado2.style.color = "#fff";
+        if (icon2) icon2.style.color = "#fff";
+        if (cor3) cor3.style.color = "#fff";
+        if (dado3) dado3.style.color = "#fff";
+        if (icon3) icon3.style.color = "#fff";
+        if (cor4) cor4.style.color = "#fff";
+        if (dado4) dado4.style.color = "#fff";
+        if (icon4) icon4.style.color = "#fff";
+        
+
+
 
         for (let i = 0; i < campo.length; i++) {
             campo[i].style.backgroundColor = "#404040";
@@ -75,6 +109,22 @@ function alterar() {
         if (chartDois) chartDois.style.backgroundColor = "#fff";
         if (boxChartUm) boxChartUm.style.backgroundColor = "#fff";
         if (boxChartDois) boxChartDois.style.backgroundColor = "#fff";
+        if (boxCliente) boxCliente.style.backgroundColor = "#fff";
+        if (boxProfessor) boxProfessor.style.backgroundColor = "#fff";
+        if (boxFuncionario) boxFuncionario.style.backgroundColor = "#fff";
+        if (boxGanhos) boxGanhos.style.backgroundColor = "#fff";
+        if (cor1) cor1.style.color = "#888";
+        if (dado1) dado1.style.color = "#888";
+        if (icon1) icon1.style.color = "#888";
+        if (cor2) cor2.style.color = "#888";
+        if (dado2) dado2.style.color = "#888";
+        if (icon2) icon2.style.color = "#888";
+        if (cor3) cor3.style.color = "#888";
+        if (dado3) dado3.style.color = "#888";
+        if (icon3) icon3.style.color = "#888";
+        if (cor4) cor4.style.color = "#888";
+        if (dado4) dado4.style.color = "#888";
+        if (icon4) icon4.style.color = "#888";
 
         for (let i = 0; i < campo.length; i++) {
             campo[i].style.backgroundColor = "white";
