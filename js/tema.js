@@ -24,6 +24,7 @@ function alterar() {
     let chartDois = document.getElementById('doughnut');
     let boxChartUm = document.getElementById('boxChartUm');
     let boxChartDois = document.getElementById('boxChartDois');
+    let boxChartTres = document.getElementById('boxChartTres');
     let boxCliente = document.getElementById('boxCliente');
     let boxProfessor = document.getElementById('boxProfessor');
     let boxFuncionario = document.getElementById('boxFuncionario');
@@ -82,6 +83,7 @@ function alterar() {
         if (chartDois) chartDois.style.backgroundColor = "#404040";
         if (boxChartUm) boxChartUm.style.backgroundColor = "#404040";
         if (boxChartDois) boxChartDois.style.backgroundColor = "#404040";
+        if (boxChartTres) boxChartTres.style.backgroundColor = "#404040";
         if (boxCliente) boxCliente.style.backgroundColor = "#404040";
         if (boxProfessor) boxProfessor.style.backgroundColor = "#404040";
         if (boxFuncionario) boxFuncionario.style.backgroundColor = "#404040";
@@ -150,6 +152,7 @@ function alterar() {
         if (chartDois) chartDois.style.backgroundColor = "#fff";
         if (boxChartUm) boxChartUm.style.backgroundColor = "#fff";
         if (boxChartDois) boxChartDois.style.backgroundColor = "#fff";
+        if (boxChartTres) boxChartTres.style.backgroundColor = "#fff";
         if (boxCliente) boxCliente.style.backgroundColor = "#fff";
         if (boxProfessor) boxProfessor.style.backgroundColor = "#fff";
         if (boxFuncionario) boxFuncionario.style.backgroundColor = "#fff";

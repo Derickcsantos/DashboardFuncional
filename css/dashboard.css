@@ -184,6 +184,36 @@
     height: auto !important;
 }
 
+.chartDestaque {
+    display: grid;
+    grid-template-columns: 1fr; /* Define apenas uma coluna para o gráfico ocupar toda a área */
+    grid-gap: 20px;
+    width: 100%;
+    padding: 5px;
+    padding-top: 0;
+}
+
+.chartGrande {
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.chartGrande h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+}
+
+.chartGrande canvas {
+    width: 100% !important; /* O canvas ocupa 100% da largura */
+    height: 400px !important; /* Definindo uma altura fixa para manter o gráfico com altura constante */
+}
+
+
 /* Responsividade */
 
 @media (max-width: 1115px) {
@@ -203,7 +233,7 @@
     .charts {
         grid-template-columns: 1fr;
     }
-    .chart {
+    .chart,.chartGrande {
         padding: 10px;
     }
 }
@@ -231,10 +261,10 @@
         width: 40px;
         height: 40px;
     }
-    .chart {
+    .chart, .chartGrande {
         padding: 10px;
     }
-    .chart h2 {
+    .chart, .chartGrande h2 {
         font-size: 16px;
     }
 }

@@ -95,4 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }).catch(error => {
         console.error('Erro ao atualizar a contagem de IDs:', error);
     });
+
 });

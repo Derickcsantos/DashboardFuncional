@@ -8,6 +8,15 @@
     <title>email</title>
 </head>
 <body>
+
+    <!--Pluggin Vlibras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
     <h1>Envie um E-mail</h1>
     
     <!-- Pré-formulário para seleção de setor -->
@@ -33,5 +42,9 @@
     </a>
 
     <script src="js/email.js"></script> 
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+         new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
