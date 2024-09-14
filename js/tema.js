@@ -43,6 +43,7 @@ function alterar() {
     let icon4 = document.getElementById('iconGanhos');
     let tituloChart1 = document.getElementById('destaque1');
     let tituloChart2 = document.getElementById('destaque2');
+    let tituloChart3 = document.getElementById('destaque3');
     let iconSide1 = document.getElementById('iconSide1');
     let textoSide1 = document.getElementById('textoSide1');
     let iconSide2 = document.getElementById('iconSide2');
@@ -61,6 +62,8 @@ function alterar() {
     let textoSide8 = document.getElementById('textoSide8');
     let iconSide9 = document.getElementById('iconSide9');
     let textoSide9 = document.getElementById('textoSide9');
+    let textArea = document.getElementById('textArea');
+
 
     if (!escuro) {
         document.body.style.backgroundColor = "#404040";
@@ -102,6 +105,7 @@ function alterar() {
         if (icon4) icon4.style.color = "#fff";
         if (tituloChart1) tituloChart1.style.color = "#fff";
         if (tituloChart2) tituloChart2.style.color = "#fff";
+        if (tituloChart3) tituloChart3.style.color = "#fff";
         if (logado) logado.style.color = "#fff";
         // if (iconSide1) iconSide1.style.color = "#000";
         // if (textoSide1) textoSide1.style.color = "#000";
@@ -171,6 +175,7 @@ function alterar() {
         if (icon4) icon4.style.color = "#154dc5";
         if (tituloChart1) tituloChart1.style.color = "#888";
         if (tituloChart2) tituloChart2.style.color = "#888";
+        if (tituloChart3) tituloChart3.style.color = "#888";
         if (logado) logado.style.color = "#293eb3";
         // if (iconSide1) iconSide1.style.color = "#fff";
         // if (textoSide1) textoSide1.style.color = "#fff";

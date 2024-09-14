@@ -189,13 +189,13 @@
     grid-template-columns: 1fr; /* Define apenas uma coluna para o gráfico ocupar toda a área */
     grid-gap: 20px;
     width: 100%;
-    padding: 5px;
+    padding: 20px;
     padding-top: 0;
 }
 
 .chartGrande {
     background: #fff;
-    padding: 5px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     width: 100%;
@@ -210,7 +210,7 @@
 
 .chartGrande canvas {
     width: 100% !important; /* O canvas ocupa 100% da largura */
-    height: 400px !important; /* Definindo uma altura fixa para manter o gráfico com altura constante */
+    height: auto !important; /* Definindo uma altura fixa para manter o gráfico com altura constante */
 }
 
 
