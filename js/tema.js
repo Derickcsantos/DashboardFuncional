@@ -1,5 +1,13 @@
 let escuro = false;
 
+// Função para aplicar o tema claro ou escuro
+function aplicarTema() {
+    let temaSalvo = localStorage.getItem('tema');
+    escuro = temaSalvo === 'escuro'; // Definir a variável de estado do tema com base no valor salvo
+    alterar(); // Aplicar o tema atual
+}
+
+// Função para alternar entre temas claro e escuro
 function alterar() {
     let logado = document.getElementById('logado');
     let formularioRegistro = document.getElementById('register-form');
@@ -64,49 +72,51 @@ function alterar() {
     let textoSide9 = document.getElementById('textoSide9');
     let textArea = document.getElementById('textArea');
 
-
-    if (!escuro) {
-        document.body.style.backgroundColor = "#404040";
-        if (formularioRegistro) formularioRegistro.style.backgroundColor = "#202020";
-        if (formularioLogin) formularioLogin.style.backgroundColor = "#202020";
-        if (containerLogin) containerLogin.style.backgroundColor = "#202020";
-        if (tituloRegistro) tituloRegistro.style.color = "white";
-        if (tituloLogin) tituloLogin.style.color = "white";
-        if (tituloUsuario) tituloUsuario.style.color = "white";
-        if (containerLogado) containerLogado.style.backgroundColor = "#404040"; // Ajustado para escuro
-        if (topbar) topbar.style.backgroundColor = "#202020";
-        if (sidebar) sidebar.style.backgroundColor = "#404040";
-        if (centro) centro.style.backgroundColor = "#202020";
-        if (formUsuario) formUsuario.style.backgroundColor = "#202020";
-        if (boxContato) boxContato.style.backgroundColor = "#202020";
-        if (texto) texto.style.color = "#fff";
-        if (tituloAjuda) tituloAjuda.style.color = "#fff";
-        if (subtitulo) subtitulo.style.color = "#fff";
-        if (chartUm) chartUm.style.backgroundColor = "#404040";
-        if (chartDois) chartDois.style.backgroundColor = "#404040";
-        if (boxChartUm) boxChartUm.style.backgroundColor = "#404040";
-        if (boxChartDois) boxChartDois.style.backgroundColor = "#404040";
-        if (boxChartTres) boxChartTres.style.backgroundColor = "#404040";
-        if (boxCliente) boxCliente.style.backgroundColor = "#404040";
-        if (boxProfessor) boxProfessor.style.backgroundColor = "#404040";
-        if (boxFuncionario) boxFuncionario.style.backgroundColor = "#404040";
-        if (boxGanhos) boxGanhos.style.backgroundColor = "#404040";
-        if (cor1) cor1.style.color = "#fff";
-        if (dado1) dado1.style.color = "#fff";
-        if (icon1) icon1.style.color = "#fff";
-        if (cor2) cor2.style.color = "#fff";
-        if (dado2) dado2.style.color = "#fff";
-        if (icon2) icon2.style.color = "#fff";
-        if (cor3) cor3.style.color = "#fff";
-        if (dado3) dado3.style.color = "#fff";
-        if (icon3) icon3.style.color = "#fff";
-        if (cor4) cor4.style.color = "#fff";
-        if (dado4) dado4.style.color = "#fff";
-        if (icon4) icon4.style.color = "#fff";
-        if (tituloChart1) tituloChart1.style.color = "#fff";
-        if (tituloChart2) tituloChart2.style.color = "#fff";
-        if (tituloChart3) tituloChart3.style.color = "#fff";
-        if (logado) logado.style.color = "#fff";
+    if (escuro) {
+        // Tema Escuro
+        document.body.style.backgroundColor = "#404040"; // Fundo escuro
+        if (formularioRegistro) formularioRegistro.style.backgroundColor = "#202020"; // Fundo do formulário
+        if (formularioLogin) formularioLogin.style.backgroundColor = "#202020"; // Fundo do formulário
+        if (containerLogin) containerLogin.style.backgroundColor = "#202020"; // Fundo do container
+        if (tituloRegistro) tituloRegistro.style.color = "#fff"; // Cor do texto
+        if (tituloLogin) tituloLogin.style.color = "#fff"; // Cor do texto
+        if (tituloUsuario) tituloUsuario.style.color = "#fff"; // Cor do texto
+        if (containerLogado) containerLogado.style.backgroundColor = "#404040"; // Fundo escuro
+        if (topbar) topbar.style.backgroundColor = "#202020"; // Fundo da topbar
+        if (sidebar) sidebar.style.backgroundColor = "#404040"; // Fundo da sidebar
+        if (centro) centro.style.backgroundColor = "#202020"; // Fundo do centro
+        if (formUsuario) formUsuario.style.backgroundColor = "#202020"; // Fundo do formulário de usuário
+        if (boxContato) boxContato.style.backgroundColor = "#202020"; // Fundo do box de contato
+        if (texto) texto.style.color = "#fff"; // Cor do texto
+        if (tituloAjuda) tituloAjuda.style.color = "#fff"; // Cor do texto
+        if (subtitulo) subtitulo.style.color = "#fff"; // Cor do texto
+        if (chartUm) chartUm.style.backgroundColor = "#404040"; // Fundo do gráfico
+        if (chartDois) chartDois.style.backgroundColor = "#404040"; // Fundo do gráfico
+        if (boxChartUm) boxChartUm.style.backgroundColor = "#404040"; // Fundo do box de gráfico
+        if (boxChartDois) boxChartDois.style.backgroundColor = "#404040"; // Fundo do box de gráfico
+        if (boxChartTres) boxChartTres.style.backgroundColor = "#404040"; // Fundo do box de gráfico
+        if (boxCliente) boxCliente.style.backgroundColor = "#404040"; // Fundo do box de cliente
+        if (boxProfessor) boxProfessor.style.backgroundColor = "#404040"; // Fundo do box de professor
+        if (boxFuncionario) boxFuncionario.style.backgroundColor = "#404040"; // Fundo do box de funcionário
+        if (boxGanhos) boxGanhos.style.backgroundColor = "#404040"; // Fundo do box de ganhos
+        if (cor1) cor1.style.color = "#fff"; // Cor do cartão
+        if (dado1) dado1.style.color = "#fff"; // Cor do dado
+        if (icon1) icon1.style.color = "#fff"; // Cor do ícone
+        if (cor2) cor2.style.color = "#fff"; // Cor do cartão
+        if (dado2) dado2.style.color = "#fff"; // Cor do dado
+        if (icon2) icon2.style.color = "#fff"; // Cor do ícone
+        if (cor3) cor3.style.color = "#fff"; // Cor do cartão
+        if (dado3) dado3.style.color = "#fff"; // Cor do dado
+        if (icon3) icon3.style.color = "#fff"; // Cor do ícone
+        if (cor4) cor4.style.color = "#fff"; // Cor do cartão
+        if (dado4) dado4.style.color = "#fff"; // Cor do dado
+        if (icon4) icon4.style.color = "#fff"; // Cor do ícone
+        if (tituloChart1) tituloChart1.style.color = "#fff"; // Cor do título do gráfico
+        if (tituloChart2) tituloChart2.style.color = "#fff"; // Cor do título do gráfico
+        if (tituloChart3) tituloChart3.style.color = "#fff"; // Cor do título do gráfico
+        if (logado) logado.style.color = "#fff"; // Cor do texto do logado
+        
+        // Descomentar se necessário
         // if (iconSide1) iconSide1.style.color = "#000";
         // if (textoSide1) textoSide1.style.color = "#000";
         // if (iconSide2) iconSide2.style.color = "#000";
@@ -125,101 +135,70 @@ function alterar() {
         // if (textoSide8) textoSide8.style.color = "#000";
         // if (iconSide9) iconSide9.style.color = "#000";
         // if (textoSide9) textoSide9.style.color = "#000";
-
-
-
-        for (let i = 0; i < campo.length; i++) {
-            campo[i].style.backgroundColor = "#404040";
-        }
-        for (let i = 0; i < letra.length; i++) {
-            letra[i].style.color = "white"; // Ajustado para escuro
-        }
-
-        escuro = true;
-        localStorage.setItem('tema', 'escuro');
+        // if (textArea) textArea.style.color = "#000";
     } else {
-        document.body.style.backgroundColor = "#fff";
-        if (formularioRegistro) formularioRegistro.style.backgroundColor = "#fff";
-        if (formularioLogin) formularioLogin.style.backgroundColor = "#fff";
-        if (containerLogin) containerLogin.style.backgroundColor = "#fff";
-        if (tituloRegistro) tituloRegistro.style.color = "#000";
-        if (tituloLogin) tituloLogin.style.color = "#000";
-        if (tituloUsuario) tituloUsuario.style.color = "#000";
-        if (containerLogado) containerLogado.style.backgroundColor = "lightgray"; // Ajustado para claro
-        if (topbar) topbar.style.backgroundColor = "#fff";
-        if (sidebar) sidebar.style.backgroundColor = "#293eb3";
-        if (centro) centro.style.backgroundColor = "#fff";
-        if (texto) texto.style.color = "#000";
-        if (tituloAjuda) tituloAjuda.style.color = "#000";
-        if (subtitulo) subtitulo.style.color = "#000";
-        if (chartUm) chartUm.style.backgroundColor = "#fff";
-        if (chartDois) chartDois.style.backgroundColor = "#fff";
-        if (boxChartUm) boxChartUm.style.backgroundColor = "#fff";
-        if (boxChartDois) boxChartDois.style.backgroundColor = "#fff";
-        if (boxChartTres) boxChartTres.style.backgroundColor = "#fff";
-        if (boxCliente) boxCliente.style.backgroundColor = "#fff";
-        if (boxProfessor) boxProfessor.style.backgroundColor = "#fff";
-        if (boxFuncionario) boxFuncionario.style.backgroundColor = "#fff";
-        if (boxGanhos) boxGanhos.style.backgroundColor = "#fff";
-        if (cor1) cor1.style.color = "#154dc5";
-        if (dado1) dado1.style.color = "#154dc5";
-        if (icon1) icon1.style.color = "#154dc5";
-        if (cor2) cor2.style.color = "#154dc5";
-        if (dado2) dado2.style.color = "#154dc5";
-        if (icon2) icon2.style.color = "#154dc5";
-        if (cor3) cor3.style.color = "#154dc5";
-        if (dado3) dado3.style.color = "#154dc5";
-        if (icon3) icon3.style.color = "#154dc5";
-        if (cor4) cor4.style.color = "#154dc5";
-        if (dado4) dado4.style.color = "#154dc5";
-        if (icon4) icon4.style.color = "#154dc5";
-        if (tituloChart1) tituloChart1.style.color = "#888";
-        if (tituloChart2) tituloChart2.style.color = "#888";
-        if (tituloChart3) tituloChart3.style.color = "#888";
-        if (logado) logado.style.color = "#293eb3";
-        // if (iconSide1) iconSide1.style.color = "#fff";
-        // if (textoSide1) textoSide1.style.color = "#fff";
-        // if (iconSide2) iconSide2.style.color = "#fff";
-        // if (textoSide2) textoSide2.style.color = "#fff";
-        // if (iconSide3) iconSide3.style.color = "#fff";
-        // if (textoSide3) textoSide3.style.color = "#fff";
-        // if (iconSide4) iconSide4.style.color = "#fff";
-        // if (textoSide4) textoSide4.style.color = "#fff";
-        // if (iconSide5) iconSide5.style.color = "#fff";
-        // if (textoSide5) textoSide5.style.color = "#fff";
-        // if (iconSide6) iconSide6.style.color = "#fff";
-        // if (textoSide6) textoSide6.style.color = "#fff";
-        // if (iconSide7) iconSide7.style.color = "#fff";
-        // if (textoSide7) textoSide7.style.color = "#fff";
-        // if (iconSide8) iconSide8.style.color = "#fff";
-        // if (textoSide8) textoSide8.style.color = "#fff";
-        // if (iconSide9) iconSide9.style.color = "#fff";
-        // if (textoSide9) textoSide9.style.color = "#fff";
-
-
-        for (let i = 0; i < campo.length; i++) {
-            campo[i].style.backgroundColor = "white";
-        }
-        for (let i = 0; i < letra.length; i++) {
-            letra[i].style.color = "black";
-        }
-
-        if (main) main.style.backgroundColor = "#fff"; // Corrigido para claro
-
-        escuro = false;
-        localStorage.setItem('tema', 'claro');
+        // Tema Claro
+        document.body.style.backgroundColor = "#f5f5f5"; // Fundo claro
+        if (formularioRegistro) formularioRegistro.style.backgroundColor = "#ffffff"; // Fundo do formulário
+        if (formularioLogin) formularioLogin.style.backgroundColor = "#ffffff"; // Fundo do formulário
+        if (containerLogin) containerLogin.style.backgroundColor = "#ffffff"; // Fundo do container
+        if (tituloRegistro) tituloRegistro.style.color = "#000"; // Cor do texto
+        if (tituloLogin) tituloLogin.style.color = "#000"; // Cor do texto
+        if (tituloUsuario) tituloUsuario.style.color = "#000"; // Cor do texto
+        if (containerLogado) containerLogado.style.backgroundColor = "#f5f5f5"; // Fundo claro
+        if (topbar) topbar.style.backgroundColor = "#ffffff"; // Fundo da topbar
+        if (sidebar) sidebar.style.backgroundColor = "#f5f5f5"; // Fundo da sidebar
+        if (centro) centro.style.backgroundColor = "#ffffff"; // Fundo do centro
+        if (formUsuario) formUsuario.style.backgroundColor = "#ffffff"; // Fundo do formulário de usuário
+        if (boxContato) boxContato.style.backgroundColor = "#ffffff"; // Fundo do box de contato
+        if (texto) texto.style.color = "#000"; // Cor do texto
+        if (tituloAjuda) tituloAjuda.style.color = "#000"; // Cor do texto
+        if (subtitulo) subtitulo.style.color = "#000"; // Cor do texto
+        if (chartUm) chartUm.style.backgroundColor = "#f5f5f5"; // Fundo do gráfico
+        if (chartDois) chartDois.style.backgroundColor = "#f5f5f5"; // Fundo do gráfico
+        if (boxChartUm) boxChartUm.style.backgroundColor = "#f5f5f5"; // Fundo do box de gráfico
+        if (boxChartDois) boxChartDois.style.backgroundColor = "#f5f5f5"; // Fundo do box de gráfico
+        if (boxChartTres) boxChartTres.style.backgroundColor = "#f5f5f5"; // Fundo do box de gráfico
+        if (boxCliente) boxCliente.style.backgroundColor = "#f5f5f5"; // Fundo do box de cliente
+        if (boxProfessor) boxProfessor.style.backgroundColor = "#f5f5f5"; // Fundo do box de professor
+        if (boxFuncionario) boxFuncionario.style.backgroundColor = "#f5f5f5"; // Fundo do box de funcionário
+        if (boxGanhos) boxGanhos.style.backgroundColor = "#f5f5f5"; // Fundo do box de ganhos
+        if (cor1) cor1.style.color = "#000"; // Cor do cartão
+        if (dado1) dado1.style.color = "#000"; // Cor do dado
+        if (icon1) icon1.style.color = "#000"; // Cor do ícone
+        if (cor2) cor2.style.color = "#000"; // Cor do cartão
+        if (dado2) dado2.style.color = "#000"; // Cor do dado
+        if (icon2) icon2.style.color = "#000"; // Cor do ícone
+        if (cor3) cor3.style.color = "#000"; // Cor do cartão
+        if (dado3) dado3.style.color = "#000"; // Cor do dado
+        if (icon3) icon3.style.color = "#000"; // Cor do ícone
+        if (cor4) cor4.style.color = "#000"; // Cor do cartão
+        if (dado4) dado4.style.color = "#000"; // Cor do dado
+        if (icon4) icon4.style.color = "#000"; // Cor do ícone
+        if (tituloChart1) tituloChart1.style.color = "#000"; // Cor do título do gráfico
+        if (tituloChart2) tituloChart2.style.color = "#000"; // Cor do título do gráfico
+        if (tituloChart3) tituloChart3.style.color = "#000"; // Cor do título do gráfico
+        if (logado) logado.style.color = "#000"; // Cor do texto do logado
+        
+        // Descomentar se necessário
+        // if (iconSide1) iconSide1.style.color = "#000";
+        // if (textoSide1) textoSide1.style.color = "#000";
+        // if (iconSide2) iconSide2.style.color = "#000";
+        // if (textoSide2) textoSide2.style.color = "#000";
+        // if (iconSide3) iconSide3.style.color = "#000";
+        // if (textoSide3) textoSide3.style.color = "#000";
+        // if (iconSide4) iconSide4.style.color = "#000";
+        // if (textoSide4) textoSide4.style.color = "#000";
+        // if (iconSide5) iconSide5.style.color = "#000";
+        // if (textoSide5) textoSide5.style.color = "#000";
+        // if (iconSide6) iconSide6.style.color = "#000";
+        // if (textoSide6) textoSide6.style.color = "#000";
+        // if (iconSide7) iconSide7.style.color = "#000";
+        // if (textoSide7) textoSide7.style.color = "#000";
+        // if (iconSide8) iconSide8.style.color = "#000";
+        // if (textoSide8) textoSide8.style.color = "#000";
+        // if (iconSide9) iconSide9.style.color = "#000";
+        // if (textoSide9) textoSide9.style.color = "#000";
+        // if (textArea) textArea.style.color = "#000";
     }
 }
-
-function aplicarTema() {
-    let temaSalvo = localStorage.getItem('tema');
-    if (temaSalvo === 'escuro') {
-        escuro = true;
-        alterar(); // Aplicar tema escuro automaticamente
-    } else {
-        escuro = false;
-        alterar(); // Aplicar tema claro automaticamente
-    }
-}
-
-window.onload = aplicarTema;

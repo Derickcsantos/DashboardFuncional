@@ -8,12 +8,27 @@
     <title>Área do Usuário</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="logado.html"><i class="fa fa-home"></i> <span>home</span></a></li>
+                <li><a href="#guia"><i class="fa fa-info-circle"></i> <span></span></a></li>
+                <li><a href="#faq"><i class="fa fa-cogs"></i> <span>FAQ</span></a></li>
+                <li><a href="#contato"><i class="fa fa-envelope"></i> <span>Contato</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+     <!--Pluggin Vlibras-->
+     <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
     <div id="containerLogado" class="container">
-        <div id="topbar" class="topbar">
-            <h2>Dashboard de Gráficos</h2>
-        </div>
-        
+ 
         <div class="form-section">
             <h3>Definir Dados dos Gráficos</h3>
             <form id="chartForm">
@@ -36,9 +51,53 @@
             <canvas id="doughnut"></canvas>
         </div>
     </div>
+    </main>
+    <!--Footer Section-->
+		<footer class="footer-bottom py-3 text-center">
+            <div class="container-footer">
+                <div class="row-footer">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#portfolio">Sobre nós</a></li>
+                            <li><a href="#services">Nossos serviços</a></li>
+                            <li><a href="#contact">Fale conosco</a></li>
+                            <li><a href="https://wa.me/5511999832007?text=Trabalhe%20conosco">Trabalhe conosco</a></li>
+							
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Nos ajude</h4>
+                        <ul>
+                            <li><a href="https://www.instagram.com/gugu.talk.show/">Nos siga</a></li>
+                            <li><a href="#contact">Feedback's</a></li>
+                            <li><a href="https://link.mercadopago.com.br/deckcs">faça uma doação</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/derickcampossantos/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="https://github.com/derickcsantos"><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="https://wa.me/5511986261007?text=Fale%20conosco"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                        <a href="https://www.instagram.com/derick_profissional"><ion-icon name="logo-instagram"></ion-icon></a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
 
+
+
+			<p class="copy">copyright &copy; 2024 by Derick.CS<br> All Rights Reserved.</p>
+		</footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
     <script src="js/definirDados.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+         new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
 </body>
 </html>

@@ -16,9 +16,38 @@ body {
 
 h2 {
     text-align: center;
-    color: #293eb3;
+    color: #fff;
     font-size: 2em;
     margin-bottom: 20px;
+}
+
+h3{
+    text-align: center;
+}
+
+header {
+    background-color: #154dc5;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a span {
+    margin-left: 8px;
 }
 
 /* Estilos da barra superior e lateral */
@@ -139,6 +168,97 @@ canvas {
     background-color: #1d2f8b;
 }
 
+.footer-bottom {
+    background: #154dc5;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-col {
+    width: 100%;
+    max-width: 300px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 40%;
+    bottom: -5px;
+    background-color: #fff;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: color 0.3s ease, padding 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding: 8px;
+}
+
+.footer-col .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.footer-col .social-links a {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    background-color: #fff;
+    color: #103fa5;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .charts {
@@ -159,5 +279,35 @@ canvas {
 
     .sidebar ul li a {
         padding-left: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .row-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 15px;
+    }
+
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+
+    .footer-col .social-links {
+        gap: 8px;
+    }
+
+    .footer-col .social-links a {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
     }
 }
