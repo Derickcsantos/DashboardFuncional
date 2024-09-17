@@ -20,7 +20,6 @@ O **DashboardFuncional** é uma aplicação web que oferece uma interface de das
  **MIT**
 
 ## 🔗 Links Úteis
- [Repositório no GitHub](https://github.com/Derickcsantos/DashboardFuncional)
  [Link do projeto ](https://derickcsantos.github.io/DashboardFuncional/)
 
 
