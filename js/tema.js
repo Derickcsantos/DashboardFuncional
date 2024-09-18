@@ -63,31 +63,33 @@ function alterar() {
     if (escuro) {
         // Aplicar tema escuro
         elements.body.style.backgroundColor = "#202020";
+        if (elements.sidebar) {
+            elements.sidebar.style.backgroundColor = "#404040";
+        }
+        
         for (let key in elements) {
             if (elements[key]) {
-                if (key === 'body') continue; // body já está configurado
+                if (key === 'body' || key === 'sidebar') continue; // body e sidebar já estão configurados
                 elements[key].style.backgroundColor = "#202020";
                 elements[key].style.color = "#fff";
-
             }
         }
     } else {
         // Aplicar tema claro
-        elements.body.style.backgroundColor = "293eb3";
+        elements.body.style.backgroundColor = "#fff";
+        if (elements.sidebar) {
+            elements.sidebar.style.backgroundColor = "#154dc5"; // Cor do sidebar no tema claro
+        }
+    
         for (let key in elements) {
             if (elements[key]) {
-                if (key === 'body') continue; // body já está configurado
+                if (key === 'body' || key === 'sidebar') continue; // body e sidebar já estão configurados
                 elements[key].style.backgroundColor = "#fff";
                 elements[key].style.color = "#293eb3";
             }
         }
     }
 }
-
-// Aplica o tema ao carregar a página
-document.addEventListener('DOMContentLoaded', aplicarTema);
-
-
 
 // Aplica o tema ao carregar a página
 document.addEventListener('DOMContentLoaded', aplicarTema);
