@@ -394,11 +394,11 @@ main {
     padding: 3% 20% 5% 20%; 
 }
 
-/* Design responsive (contatos)*/
+/* Design responsivo (contatos) */
 
 @media (max-width: 991px) {
     #contact {
-        padding: 20px; /* Reduz padding para dispositivos menores */
+        padding: 15px; /* Reduz padding para dispositivos menores */
     }
 
     .box {
@@ -408,67 +408,64 @@ main {
             "form"
             "info"
             "map";
-        gap: 15px; /* Ajusta o espaçamento entre os itens */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
         max-width: 100%; /* Garante que ocupe toda a largura disponível */
         margin: 0 auto; /* Centraliza a caixa horizontalmente */
     }
 
     .contact {
-        padding: 20px; /* Ajusta o padding para dispositivos menores */
+        padding: 15px; /* Ajusta o padding para dispositivos menores */
     }
 
     .inputBox {
-        margin-bottom: 15px; /* Ajusta o espaçamento inferior para input boxes */
+        margin-bottom: 10px; /* Ajusta o espaçamento inferior para input boxes */
     }
 
     .inputBox input,
     .inputBox textarea {
-        font-size: 0.9em; /* Reduz o tamanho da fonte */
-        padding: 8px; /* Ajusta o padding */
+        font-size: 0.9em; /* Mantém o tamanho da fonte */
+        padding: 10px; /* Ajusta o padding */
+        width: 100%; /* Garante que os inputs ocupem toda a largura */
+        box-sizing: border-box; /* Inclui padding na largura total */
     }
 
     .inputBox input[type="submit"] {
-        font-size: 0.9em; /* Reduz o tamanho da fonte do botão de envio */
-        max-width: 100%; /* Garante que o botão ocupe toda a largura disponível */
-        padding: 10px; /* Ajusta o padding do botão de envio */
+        font-size: 0.9em; /* Mantém o tamanho da fonte do botão de envio */
+        width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+        padding: 12px; /* Ajusta o padding do botão de envio */
+        cursor: pointer; /* Adiciona um ponteiro ao passar o mouse */
     }
 
     .info {
-        padding: 15px; /* Reduz o padding da seção de informações */
-    }
-
-}
-
-@media (max-width: 576px) {
-
-    .box{
-        width: 100%;
-        height: auto;
-    }
-
-    .inputBox {
-        width: 100%; /* Garante que os inputs ocupem toda a largura disponível em dispositivos muito pequenos */
-    }
-
-    .inputBox input,
-    .inputBox textarea {
-        font-size: 0.8em; /* Ajuste adicional no tamanho da fonte */
-        padding: 6px; /* Ajuste adicional no padding */
-    }
-
-    .inputBox input[type="submit"] {
-        font-size: 0.8em; /* Reduz o tamanho da fonte do botão de envio para dispositivos muito pequenos */
-        padding: 8px; /* Ajuste adicional no padding do botão de envio */
+        padding: 10px; /* Reduz o padding da seção de informações */
     }
 
     .info .infoBox div span {
-        font-size: 1em; /* Reduz o tamanho dos ícones de informações para dispositivos muito pequenos */
-        min-width: 25px; /* Ajuste adicional no tamanho mínimo dos ícones */
-        height: 25px; /* Ajuste adicional na altura dos ícones */
+        font-size: 1em; /* Reduz o tamanho dos ícones de informações */
+        min-width: 25px; /* Ajusta o tamanho mínimo dos ícones */
+        height: 25px; /* Ajusta a altura dos ícones */
     }
 
     .sci li a {
-        font-size: 1.3em; /* Ajuste adicional no tamanho dos ícones de redes sociais */
+        font-size: 1.2em; /* Reduz o tamanho dos ícones de redes sociais */
+        margin: 0 5px; /* Adiciona margem lateral aos ícones */
+    }
+
+    .doacao h1 {
+        font-size: 1.1em; /* Reduz o tamanho da fonte do título de doação */
+    }
+
+    .doacao button {
+        width: 100%; /* Garante que o botão de doação ocupe toda a largura */
+        height: 35px; /* Ajusta a altura do botão de doação */
+        margin-top: 15px; /* Ajusta a margem superior do botão de doação */
+        font-size: 1em; /* Aumenta o tamanho da fonte para melhor legibilidade */
+    }
+
+    /* Adiciona responsividade adicional para elementos */
+    .inputBox textarea {
+        resize: vertical; /* Permite redimensionar verticalmente */
+        min-height: 80px; /* Altura mínima para a área de texto */
     }
 }
 
