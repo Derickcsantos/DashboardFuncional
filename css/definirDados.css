@@ -1,6 +1,6 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family:'poppins','sans-serif';
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
@@ -45,6 +45,7 @@ form {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    height: auto;
 }
 
 form label {
@@ -53,10 +54,22 @@ form label {
     margin-bottom: 5px;
 }
 
+.labelChart{
+    text-align: center;
+    margin: 15px 0 1px 0;
+    font-size: 13px;
+}
+
+.labelSecundaria{
+    font-size: 8px;
+    text-align: center;
+    color: #cecece;
+}
+
 form input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin: 0 5px 2px 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -70,7 +83,8 @@ form button {
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
+    margin: 10px 0 0 0;
 }
 
 form button:hover {

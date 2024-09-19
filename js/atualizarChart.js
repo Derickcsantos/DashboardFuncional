@@ -125,3 +125,4 @@ function atualizarGraficos() {
     myBarChart.data.datasets[0].data = valoresBar;
     myBarChart.update();
 }
+
