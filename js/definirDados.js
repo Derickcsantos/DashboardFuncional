@@ -14,11 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const doughnutValues = document.getElementById('doughnutInput').value.split(',').map(Number);
         const barValues = document.getElementById('barInput').value.split(',').map(Number);
 
+        // Calcular e salvar valores de "funcionarios"
+        const totalFuncionarios = doughnutValues.reduce((acc, value) => acc + value, 0);
+        localStorage.setItem('funcionarios', totalFuncionarios);
+
         alert('Dados atualizados com sucesso!');
 
         console.log('Line Values:', lineValues);
         console.log('Doughnut Values:', doughnutValues);
         console.log('Bar Values:', barValues);
+        console.log('Total de Funcionários:', totalFuncionarios);
 
         localStorage.setItem('lineChartData', JSON.stringify(lineValues));
         localStorage.setItem('doughnutChartData', JSON.stringify(doughnutValues));

@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebars */
+.lateralEsquerda,
+.lateralDireita {
+  background-color: #f5f5f5;
+  padding: 20px;
+  width: 20%;
+}
+
+#ano-atual{
+  color: #293eb3;
+  font-size: 25px;
+  margin: 5px;
+}
+
+.containerCalendario {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Cabeçalho do ano */
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Lista de meses */
+#meses {
+  list-style: none;
+  padding: 0;
+}
+
+#meses li {
+  list-style-type: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #293eb3;
+  color: #fff;
+  margin: 5px 0;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#meses li:hover{
+  background-color: #7c7bd1;
+  color: #fff;
+}
+
+#meses .selecionado {
+  background-color: #213292;
+  color: #fff;
+}
+
+
+/* Eventos */
+.containerEventos {
+  margin-top: 20px;
+}
+
+/* Botões */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #293eb3;
+}
+
+button:hover{
+  background-color: #213292;
+}
+
+/* Calendário */
+#calendario {
+  width: 100%;
+  border-collapse: collapse;
+  color:#293eb3;
+}
+
+#calendario th, #calendario td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#calendario th {
+  background-color: #f4f4f4;
+}
+
+#calendario td {
+  height: 50px;
+}
+
+#calendario td:hover {
+  background-color: #293eb3;
+  color: #fff;
+}
+
+#calendario td.selecionado {
+  background-color: #293eb3;
+  color: #fff;
+}
+
+#mesSelecionado{
+  text-align: center;
+  color: #293eb3;
+  font-size: 24px;
+}

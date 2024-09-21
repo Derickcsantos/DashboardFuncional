@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/eventos.css">
+  <title>Calendário de eventos</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="lateralEsquerda">
+      <div class="navegacao">
+        <button class="anoAnterior">&#10094;</button>
+        <span id="ano-atual"></span>
+        <button class="proximoAno">&#10095;</button>
+      </div>
+      <ul id="meses">
+        <!-- Lista de meses será criada dinamicamente -->
+      </ul>
+    </div>
+    <div class="containerCalendario">
+      <h3 id="mesSelecionado"></h3>
+      <table id="calendario"></table> <!-- Correção: Uso de <table> para o calendário -->
+    </div>
+    <div class="lateralDireita">
+      <div class="containerEventos">
+        <ul id="listaEventos"></ul>
+        <button id="addEvento">Adicionar Evento</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/eventos.js"></script>
+</body>
+</html>

@@ -60,6 +60,16 @@ body {
     text-align: center;
 }
 
+#personalizacao{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+}
+
+
+
+
 /* Ocultar texto e mostrar apenas ícones em telas pequenas */
 @media (max-width: 768px) {
     .sidebar ul li a span {
@@ -92,4 +102,57 @@ body {
 
 .content-section {
     display: none;
+}
+
+@media (max-width: 1115px) {
+    .sidebar {
+        width: 60px;
+    }
+    .main {
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 880px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .charts {
+        grid-template-columns: 1fr;
+    }
+    .chart,.chartGrande {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .topbar {
+        grid-template-columns: 1fr 5fr 0.4fr 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .logo h2 {
+        font-size: 20px;
+    }
+    .search {
+        width: 80%;
+    }
+    .search input {
+        padding: 0 20px;
+    }
+    .fa-bell {
+        margin-right: 5px;
+    }
+    .user {
+        width: 40px;
+        height: 40px;
+    }
+    .chart, .chartGrande {
+        padding: 10px;
+    }
+    .chart, .chartGrande h2 {
+        font-size: 16px;
+    }
 }
