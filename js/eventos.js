@@ -114,11 +114,28 @@ criarListaMeses();
 
 // Função para adicionar eventos
 document.getElementById('addEvento').addEventListener('click', function() {
-    const evento = prompt('Descreva o evento:');
+    const evento = document.getElementById('AddTarefa').value;
     if (evento) {
         const listaEventos = document.getElementById('listaEventos');
         const itemEvento = document.createElement('li');
         itemEvento.textContent = evento;
+
+        const span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        span.style.marginLeft = '30%';
+        span.style.color = 'red';
+        span.style.fontSize = '20px';
+        span.style.cursor = 'pointer';
         listaEventos.appendChild(itemEvento);
+        
+        span.addEventListener('click', function() {
+            listaEventos.removeChild(itemEvento);
+        });
+
+        itemEvento.appendChild(span);
+        console.log('Tarefa adicionada com sucesso!')
+    }
+    else{
+        console.log('Falha para adicionar tarefa')
     }
 });

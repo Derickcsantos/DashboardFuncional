@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/eventos.css">
   <title>Calendário de eventos</title>
 </head>
 <body>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
 
   <div class="container">
     <div class="lateralEsquerda">
@@ -18,6 +25,7 @@
       <ul id="meses">
         <!-- Lista de meses será criada dinamicamente -->
       </ul>
+      <a href="logado.html"><button class="sair">Sair<i class="fa-solid fa-right-from-bracket"></i></button></a>
     </div>
     <div class="containerCalendario">
       <h3 id="mesSelecionado"></h3>
@@ -25,12 +33,18 @@
     </div>
     <div class="lateralDireita">
       <div class="containerEventos">
-        <ul id="listaEventos"></ul>
         <button id="addEvento">Adicionar Evento</button>
+        <input style="text-align: center;" type="text" name="tarefa" id="AddTarefa" placeholder="Adicionar tarefa">
+        <ul id="listaEventos"></ul>
       </div>
     </div>
   </div>
   
   <script src="js/eventos.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+         new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>

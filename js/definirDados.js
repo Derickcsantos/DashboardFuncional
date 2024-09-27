@@ -15,8 +15,28 @@ document.addEventListener('DOMContentLoaded', function () {
         const barValues = document.getElementById('barInput').value.split(',').map(Number);
 
         // Calcular e salvar valores de "funcionarios"
-        const totalFuncionarios = doughnutValues.reduce((acc, value) => acc + value, 0);
-        localStorage.setItem('funcionarios', totalFuncionarios);
+
+        professorCard
+
+        function totalDeFuncionarios() {
+            return openDB().then(db => {
+                return new Promise((resolve, reject) => {
+                    const transaction = db.transaction('funcionarios', 'readonly');
+                    const totalFuncionarios = doughnutValues.reduce((acc, value) => acc + value, 0);
+                    localStorage.setItem('funcionarios', totalFuncionarios);
+                    const request = store.count(); // Contando o número total de IDs
+    
+                    request.onsuccess = () => {
+                        resolve(request.result); // Resolve com o número total de IDs
+                    };
+    
+                    request.onerror = () => {
+                        reject('Erro ao contar os IDs');
+                    };
+                });
+            });
+        }
+    
 
         alert('Dados atualizados com sucesso!');
 
