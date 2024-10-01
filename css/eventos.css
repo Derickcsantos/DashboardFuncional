@@ -1,9 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'poppins', sans-serif;
-
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -15,6 +14,7 @@ body {
 /* Container principal */
 .container {
   display: flex;
+  flex-direction: column; /* Mobile por padrão */
   min-height: 100vh;
 }
 
@@ -23,21 +23,17 @@ body {
 .lateralDireita {
   background-color: #f5f5f5;
   padding: 20px;
-  width: 20%;
+  width: 100%; /* Em mobile, ocupa 100% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#ano-atual{
-  color: #293eb3;
-  font-size: 25px;
-  margin: 5px;
+.lateralDireita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.containerCalendario {
-  flex: 1;
-  padding: 20px;
-}
-
-/* Cabeçalho do ano */
+/* Navegação */
 .navegacao {
   display: flex;
   justify-content: space-between;
@@ -46,85 +42,36 @@ body {
   color: #000;
 }
 
-/* Lista de meses */
-#meses {
-  list-style: none;
-  padding: 0;
-  width: 100%
-}
-
-#meses li {
-  list-style-type: none;
-  padding: 10px;
-  cursor: pointer;
-  background-color: #293eb3;
-  color: #fff;
-  margin: 5px 0;
-  text-align: center;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-#meses li:hover{
-  background-color: #7c7bd1;
-  color: #fff;
-}
-
-#meses .selecionado {
-  background-color: #213292;
-  color: #fff;
-}
-
-
-/* Eventos */
-.containerEventos {
-  margin-top: 20px;
-}
-
-/* Botões */
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #fff;
-  background-color: #293eb3;
-}
-
-.sair{
-  width: 100%;
-  margin: 20px 0 0 0;
-}
-
-.sair i{
-  margin: 0 0 0 10px;
-}
-
-button:hover{
-  background-color: #213292;
-}
-
 .proximoAno, 
 .anoAnterior{
-  width: 5%;
+  background-color: #fff;
+  color: #293eb3;
 }
 
-input{
-  width: 100%;
-  height: 40px;
-  border-radius: 15px;
+.proximoAno:hover, 
+.anoAnterior:hover{
+  background-color: #fff;
+  color: #293eb3
+}
+
+#ano-atual {
+  color: #293eb3;
+  font-size: 25px;
+  margin: 5px;
 }
 
 /* Calendário */
 #calendario {
   width: 100%;
   border-collapse: collapse;
-  color:#293eb3;
+  color: #293eb3;
+  margin-bottom: 20px;
 }
 
-#calendario th, #calendario td {
+#calendario th,
+#calendario td {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 8px; /* Reduzido para melhor adaptação em telas pequenas */
   text-align: center;
 }
 
@@ -133,7 +80,7 @@ input{
 }
 
 #calendario td {
-  height: 50px;
+  height: 40px; /* Ajuste para menor altura em mobile */
 }
 
 #calendario td:hover {
@@ -146,30 +93,159 @@ input{
   color: #fff;
 }
 
-#mesSelecionado{
+#mesSelecionado {
   text-align: center;
   color: #293eb3;
   font-size: 24px;
   margin: 0 0 4% 0;
 }
 
-#AddTarefa{
+/* Lista de meses */
+#meses {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite quebra de linha em dispositivos menores */
+  margin-top: 20px;
+}
+
+#meses li {
+  list-style-type: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #293eb3;
+  color: #fff;
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  flex: 1 1 30%; /* Ajusta a largura para mobile */
+}
+
+#meses li:hover {
+  background-color: #7c7bd1;
+}
+
+#meses .selecionado {
+  background-color: #213292;
+}
+
+/* Botões */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #293eb3;
+  margin-top: 20px;
+  width: 100%; /* Largura total */
+}
+
+button:hover {
+  background-color: #213292;
+}
+
+/* Input e Eventos */
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+#AddTarefa {
   border: 1px solid #ccc;
-  margin: 5px 0  15px 0;
+  margin: 5px 0 15px 0;
 }
 
-#addEvento{
-  margin: 5px 0 10px 70px;
-}
-
-#listaEventos{
-  margin: 10px  0 0 20px;
+#listaEventos {
+  margin: 10px 0;
   line-height: 2;
   text-align: center;
   color: #000;
-  list-style:decimal;
+  list-style: decimal;
 }
 
-#listaEventos li{
+#listaEventos li {
   border-bottom: 1px solid #000;
+}
+
+/* Estilos para Desktop */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Altera para layout em linha */
+  }
+
+  .lateralEsquerda {
+    width: 20%; /* Sidebar de meses à esquerda */
+    order: 1; /* Mantém a ordem */
+  }
+
+  .containerCalendario {
+    flex: 1; /* O calendário ocupa o espaço restante */
+    margin: 20px; /* Margem ao redor do calendário */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o calendário */
+    order: 2; /* Coloca o calendário em segundo lugar */
+  }
+
+  .lateralDireita {
+    width: 20%; /* Sidebar de tarefas à direita */
+    order: 3; /* Mantém a ordem */
+    align-items: center; /* Centraliza itens */
+  }
+
+  #meses {
+    justify-content: flex-start; /* Alinha os meses à esquerda */
+  }
+
+  #meses li {
+    flex: 1 1 auto; /* Ajusta largura para desktop */
+    margin: 5px 10px; /* Margem entre os meses */
+  }
+}
+
+/* Estilos para Mobile */
+@media (max-width: 767px) {
+  .containerCalendario {
+    order: 1; /* Coloca o calendário em primeiro lugar */
+  }
+
+  .lateralEsquerda {
+    order: 3; /* Coloca a lista de meses em terceiro lugar */
+    padding: 10px; /* Ajusta o padding para melhor aparência em mobile */
+  }
+
+  .lateralDireita {
+    order: 2; /* Coloca a seção de tarefas em segundo lugar */
+  }
+
+  /* Ajustes adicionais para o calendário em mobile */
+  #calendario th,
+  #calendario td {
+    padding: 5px; /* Menos padding para telas pequenas */
+  }
+
+  #calendario td {
+    height: 30px; /* Reduz altura das células para mobile */
+  }
+
+  #meses {
+    justify-content: center; /* Centraliza a lista de meses */
+    margin-bottom: 20px; /* Adiciona espaço abaixo da lista de meses */
+  }
+
+  #meses li {
+    flex: 1 1 40%; /* Aumenta a largura em mobile para permitir mais meses na linha */
+    min-width: 80px; /* Define uma largura mínima para os itens */
+    padding: 10px 5px; /* Ajusta o padding para telas pequenas */
+  }
+
+  .sair {
+    width: 100%; /* Ajusta a largura do botão Sair em mobile */
+    margin: 10px 0; /* Margem para melhor espaçamento */
+  }
 }

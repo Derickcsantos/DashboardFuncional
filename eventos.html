@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/eventos.css">
-  <title>Calendário de eventos</title>
+  <title>Calendário de Eventos</title>
 </head>
 <body>
   <div vw class="enabled">
@@ -16,35 +16,42 @@
   </div>
 
   <div class="container">
-    <div class="lateralEsquerda">
+    <!-- Calendário -->
+    <div class="containerCalendario">
       <div class="navegacao">
         <button class="anoAnterior">&#10094;</button>
         <span id="ano-atual"></span>
         <button class="proximoAno">&#10095;</button>
       </div>
-      <ul id="meses">
-        <!-- Lista de meses será criada dinamicamente -->
-      </ul>
-      <a href="logado.html"><button class="sair">Sair<i class="fa-solid fa-right-from-bracket"></i></button></a>
-    </div>
-    <div class="containerCalendario">
       <h3 id="mesSelecionado"></h3>
-      <table id="calendario"></table> <!-- Correção: Uso de <table> para o calendário -->
+      <table id="calendario"></table>
     </div>
+
+    <!-- Seção de Tarefas -->
     <div class="lateralDireita">
       <div class="containerEventos">
+        <input type="text" name="tarefa" id="AddTarefa" placeholder="Adicionar tarefa" style="text-align: center;">
         <button id="addEvento">Adicionar Evento</button>
-        <input style="text-align: center;" type="text" name="tarefa" id="AddTarefa" placeholder="Adicionar tarefa">
         <ul id="listaEventos"></ul>
       </div>
     </div>
+
+    <!-- Meses do Ano e Botão de Sair -->
+    <div class="lateralEsquerda">
+      <ul id="meses">
+        <!-- Lista de meses será criada dinamicamente -->
+      </ul>
+      <a href="logado.html">
+        <button class="sair">Sair <i class="fa-solid fa-right-from-bracket"></i></button>
+      </a>
+    </div>
   </div>
-  
+
   <script src="js/eventos.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-         new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 </html>
