@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/eventos.css">
+  <link rel="stylesheet" href="css/transicao.css">
   <title>Calendário de Eventos</title>
 </head>
 <body>
@@ -46,10 +47,12 @@
       </a>
     </div>
   </div>
+  <div id="loading" class="loader" style="display: none;"></div>
 
   <script src="js/eventos.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script src="js/transicao.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>

@@ -1,0 +1,32 @@
+/* Adicione isso ao seu CSS existente */
+
+/* Animação de desvanecimento */
+.fade-out {
+    opacity: 1;
+    transition:  2s ease; /* Duração da animação */
+}
+
+/* Loader */
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-left-color: red; /* Cor da parte visível */
+    border-radius: 50%;
+    width: 50px; /* Tamanho do spinner */
+    height: 50px; /* Tamanho do spinner */
+    animation: spin 1s linear infinite; /* Animação */
+    position: fixed; /* Para que fique no centro da tela */
+    top: 90%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Para que fique acima de outros elementos */
+    display: none; /* Inicialmente oculto */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

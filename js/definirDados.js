@@ -8,49 +8,31 @@ document.addEventListener('DOMContentLoaded', function () {
     mostrarDados(valoresLine, valoresDoughnut, valoresBar);
 
     document.getElementById('chartForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Evita o envio do formulário e a recarga da página
 
         const lineValues = document.getElementById('lineInput').value.split(',').map(Number);
         const doughnutValues = document.getElementById('doughnutInput').value.split(',').map(Number);
         const barValues = document.getElementById('barInput').value.split(',').map(Number);
 
-        // Calcular e salvar valores de "funcionarios"
+        // Calcular o total de funcionários (soma dos valores do doughnut)
+        const totalFuncionarios = doughnutValues.reduce((acc, val) => acc + val, 0);
 
-        professorCard
-
-        function totalDeFuncionarios() {
-            return openDB().then(db => {
-                return new Promise((resolve, reject) => {
-                    const transaction = db.transaction('funcionarios', 'readonly');
-                    const totalFuncionarios = doughnutValues.reduce((acc, value) => acc + value, 0);
-                    localStorage.setItem('funcionarios', totalFuncionarios);
-                    const request = store.count(); // Contando o número total de IDs
-    
-                    request.onsuccess = () => {
-                        resolve(request.result); // Resolve com o número total de IDs
-                    };
-    
-                    request.onerror = () => {
-                        reject('Erro ao contar os IDs');
-                    };
-                });
-            });
-        }
-    
-
-        alert('Dados atualizados com sucesso!');
-
-        console.log('Line Values:', lineValues);
-        console.log('Doughnut Values:', doughnutValues);
-        console.log('Bar Values:', barValues);
-        console.log('Total de Funcionários:', totalFuncionarios);
-
+        // Armazenar no localStorage
         localStorage.setItem('lineChartData', JSON.stringify(lineValues));
         localStorage.setItem('doughnutChartData', JSON.stringify(doughnutValues));
         localStorage.setItem('barChartData', JSON.stringify(barValues));
 
         // Atualizar gráficos após a atualização dos dados
         atualizarGraficos();
+
+        // Atualizar total de funcionários no box
+        document.getElementById('dadoCor2').textContent = totalFuncionarios;
+
+        alert('Dados atualizados com sucesso!');
+        console.log('Line Values:', lineValues);
+        console.log('Doughnut Values:', doughnutValues);
+        console.log('Bar Values:', barValues);
+        console.log('Total de Funcionários:', totalFuncionarios);
     });
 
     function mostrarDados(valoresLine, valoresDoughnut, valoresBar) {

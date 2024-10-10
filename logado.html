@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/transicao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Área do Usuário</title>
 </head>
@@ -41,18 +42,18 @@
                         <div id="textoSide1"> Dashboard</div>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="areaAdmin.html">
                         <i id="iconSide2" class="fas fa-user-graduate"></i>
                         <div id="textoSide2"> Clientes</div>
                     </a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                     <a href="areaAdmin.html">
                         <i id="iconSide3" class="fas fa-chalkboard-teacher"></i>
                         <div id="textoSide3"> Teachers</div>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="areaAdmin.html">
                         <i id="iconSide4" class="fas fa-users"></i>
@@ -122,11 +123,11 @@
                 </div>
                 <div id="boxGanhos" class="card">
                     <div class="card-content" id="GanhosCard">
-                        <div id="dadoCor4" class="number">R$2.900</div>
+                        <div id="dadoCor4" class="number">R$0</div>
                         <div id="cardCor4" class="card-name">Ganhos</div>
                     </div>
                     <div class="icon-box">
-                        <i id="iconGanhos"  class="fas fa-dollar-sign"></i>
+                        <i id="iconGanhos" class="fas fa-dollar-sign"></i>
                     </div>
                 </div>
             </div>
@@ -148,6 +149,7 @@
             </div>
         </div>
     </div>
+    <div id="loading" class="loader" style="display: none;"></div>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -156,7 +158,9 @@
     <script src="js/db.js"></script>
     <script src="js/logado.js"></script>
     <script src="js/tema.js"></script>
+    <script src="js/definirDados.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="js/transicao.js"></script>
     <script>
          new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>

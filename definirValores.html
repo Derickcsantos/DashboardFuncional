@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/definirDados.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/transicao.css">
+    <title>Definir valores</title>
 </head>
 <body>
 
@@ -13,32 +14,39 @@
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
 
     <main>
         <form id="chartForm">
-            <label class="labelChart" for="text">Dados do grafico de linhas</label>
-            <input id="lineInput" type="text" placeholder="Dados do grafico de linhas"/>
+            <label class="labelChart" for="text">Dados do gráfico de linhas</label>
+            <input id="lineInput" type="text" placeholder="Dados do gráfico de linhas"/>
             <label for="text" class="labelSecundaria">jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dec</label>
-            <label class="labelChart" for="text">Dados do grafico de rosca</label>
-            <input id="doughnutInput" type="text" placeholder="Dados do grafico de rosca"/>
-            <label for="text" class="labelSecundaria">Operarios &nbsp; T.I &nbsp; Administração &nbsp; Outros</label>
-            <label class="labelChart" for="text">Dados do grafico de barras</label>
-            <input id="barInput" type="text" placeholder="Dados do grafico de barras"/>
-            <label for="text" class="labelSecundaria">1Trimestre &nbsp; 2Trimestre &nbsp; 3Trimestre &nbsp; 4Trimestre</label>
-            <button type="submit">Atualizar Gráficos</button>
-            
-        </form>   
-        <a href="logado.html"><button class="botao">Voltar</button></a>
-    </main>
 
-<script src="js/atualizarChart.js"></script>
-<script src="js/definirDados.js"></script>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <label class="labelChart" for="text">Dados do gráfico de rosca</label>
+            <input id="doughnutInput" type="text" placeholder="Dados do gráfico de rosca"/>
+            <label for="text" class="labelSecundaria">Operários &nbsp; T.I &nbsp; Administração &nbsp; Outros</label>
+
+            <label class="labelChart" for="text">Dados do gráfico de barras</label>
+            <input id="barInput" type="text" placeholder="Dados do gráfico de barras"/>
+            <label for="text" class="labelSecundaria">1 Trimestre &nbsp; 2 Trimestre &nbsp; 3 Trimestre &nbsp; 4 Trimestre</label>
+
+            <button type="submit">Atualizar Gráficos</button>
+        </form>   
+
+        <a href="logado.html"><button class="botao">Voltar</button></a>
+
+    </main>
+    <div id="loading" class="loader" style="display: none;"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/atualizarChart.js"></script>
+    <script src="js/definirDados.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="js/transicao.js"></script>
     <script>
-         new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
 </html>
